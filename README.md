@@ -16,6 +16,11 @@ https://arxiv.org/abs/quant-ph/0701171 (Metatheorem for the Liar's Paradox and T
 https://grahampriest.net/?ddownload=865 (Paraconsistent metalanguage and semantics)
 http://www.mbph.de/Logic/Para/SemanticClosure.pdf (Paraconsistency and semantic closure)
 https://www.irishmathsoc.org/bull23/bull23_8-21.pdf (Paraconsistency, Classical Completeness as Dilemma)
+http://lna.unb.br/lna_n01_01_gpriest.pdf (Paraconsistency, Classical Completeneess as Dilemma)
+http://people.cs.uchicago.edu/~kaharris/phil525/week_1/consistent.html (Semantically Closed Classical System)
+http://people.cs.uchicago.edu/~kaharris/phil525/negation.pdf (Semantics of Classical Negation)
+https://www.impan.pl/~kz/truthseminar/Kripke_Outline.pdf (Kripke Theory of Truth)
+http://tsinghualogic.net/JRC/wp-content/uploads/2016/06/China_MT2_2016.pdf (Hintikka Sets, classical model theory, and consistency)
 
 http://library.utia.cas.cz/separaty/2016/MTR/noguera-0469166.pdf (fuzzy logics, paraconsistency, degree-preserving entailment, definition of Boldly Paraconsistent, LFI)
 https://www.sciencedirect.com/science/article/pii/S1571066120300827 (Definition of Genuine Paraconsistency and Genuine Paracompleteness)
@@ -73,6 +78,12 @@ https://sartemov.ws.gc.cuny.edu/files/2013/01/Vienna2011-FOLP.pdf (FOLP, Paracom
 https://www.youtube.com/watch?v=9ZqcTEX4v9E (Assertion and Denial)
 https://arxiv.org/abs/1103.4324v3 (Review of Paraconsistent Systems)
 https://sites.ualberta.ca/~francisp/Phil428/Phil428.11/PostPellMartin.pdf (Functional Completeness)
+https://people.math.wisc.edu/logic/quals/Ashu-Notes.pdf (Summary of Classical First Order Logic properties such as categoricity, completeness, and compactness)
+https://espace.library.uq.edu.au/view/UQ:4fcc5f0 (Inconsistent Truth Tables)
+https://arxiv.org/pdf/1811.03678v2.pdf (Reversible Computing, Quantum Computing)
+http://holtz.org/Library/Natural%20Science/Physics/Optimization%20Through%20Evolution%20and%20Recombination%20-%20Bremermann%201962.htm (Bremermann Computing Limit)
+https://arxiv.org/pdf/1611.05821.pdf (Communication Limit)
+http://worrydream.com/refs/Landauer%20-%20Irreversibility%20and%20Heat%20Generation%20in%20the%20Computing%20Process.pdf (Landauer heat-process efficiency Limit)
 
 To be investigated but possibly relevant:
 https://logic.rwth-aachen.de/Research/AlMoTh/index.html.en (finite model theory and algorithmic theory is particular relevant for substructural or non-structural systems, polarity)
