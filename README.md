@@ -21,11 +21,13 @@ http://people.cs.uchicago.edu/~kaharris/phil525/week_1/consistent.html (Semantic
 http://people.cs.uchicago.edu/~kaharris/phil525/negation.pdf (Semantics of Classical Negation)
 https://www.impan.pl/~kz/truthseminar/Kripke_Outline.pdf (Kripke Theory of Truth)
 http://tsinghualogic.net/JRC/wp-content/uploads/2016/06/China_MT2_2016.pdf (Hintikka Sets, classical model theory, and consistency)
+https://scholarworks.uno.edu/cgi/viewcontent.cgi?article=1057&context=honors_theses (Definability of Truth)
 
 http://library.utia.cas.cz/separaty/2016/MTR/noguera-0469166.pdf (fuzzy logics, paraconsistency, degree-preserving entailment, definition of Boldly Paraconsistent, LFI)
 https://www.sciencedirect.com/science/article/pii/S1571066120300827 (Definition of Genuine Paraconsistency and Genuine Paracompleteness)
 https://projecteuclid.org/journals/notre-dame-journal-of-formal-logic/volume-43/issue-3/Paraconsistency-Everywhere/10.1305/ndjfl/1074290713.pdf (Inconsistency Tolerant Logics)
 https://arxiv.org/abs/quant-ph/0610097 (Nonlocality as a special case of contextuality)
+http://philsci-archive.pitt.edu/17240/1/CRPT.pdf (Counterfactual Reasoning, Contextuality)
 
 
 (Thesis) There is a trichotomy between equational theory, computation, and polarity.
@@ -84,6 +86,10 @@ https://arxiv.org/pdf/1811.03678v2.pdf (Reversible Computing, Quantum Computing)
 http://holtz.org/Library/Natural%20Science/Physics/Optimization%20Through%20Evolution%20and%20Recombination%20-%20Bremermann%201962.htm (Bremermann Computing Limit)
 https://arxiv.org/pdf/1611.05821.pdf (Communication Limit)
 http://worrydream.com/refs/Landauer%20-%20Irreversibility%20and%20Heat%20Generation%20in%20the%20Computing%20Process.pdf (Landauer heat-process efficiency Limit)
+https://arxiv.org/abs/0811.4542 (Logical Independence and Quantum Randomness)
+http://philsci-archive.pitt.edu/8660/1/master_theory_experiment.pdf (Physical Theories, Consistency)
+https://www.cs.yale.edu/homes/piskac/teaching/decpro-729/fol.pdf (First Order Logic, Substitution)
+
 
 To be investigated but possibly relevant:
 https://logic.rwth-aachen.de/Research/AlMoTh/index.html.en (finite model theory and algorithmic theory is particular relevant for substructural or non-structural systems, polarity)
