@@ -33,7 +33,7 @@ Theses:
 * (Thesis) There is a paraconsistent alternative to the metalinguistic hierarchy based on the problems of definability of truth and definability of falsity in paraconsistent systems.
 
 A system is called a paraconsistent system to some degree if it invalidates (or invalidates-by-epsilon-degrees) any of the following:
-Logic explosion in the object system
+* Logic explosion in the object system
 * Non Contradiction on the right hand side of the turnstile in the object system
 * Non Contradiction on the left hand side of the turnstile in the object system
 * (conjectured) Logic explosion in the metasystem
@@ -41,7 +41,7 @@ Logic explosion in the object system
 * (conjectured) Non Contradiction on the left hand side of the turnstile in the metasystem
 
 A system is called a paracomplete system to some degree if it invalidates (or invalidates-by-epsilon-degrees) any of the following:
-(conjectured) Law of indiscernibles in the object system
+* (conjectured) Law of indiscernibles in the object system
 * Excluded Middle on the right hand side of the turnstile in the object system
 * Excluded Middle on the left hand side of the turnstile in the object system
 * (conjectured) Law of indiscernibles in the metasystem
@@ -75,7 +75,7 @@ Secondary References:
 * https://link.springer.com/content/pdf/10.1007/s10516-021-09561-8.pdf (Type Theories, Limits of Computability)
 * https://www.sciencedirect.com/science/article/pii/S0304397511008978 (Proof system of Nelson's logic N4)
 * http://www.cle.unicamp.br/prof/coniglio/LETJ.pdf (paraconsistency and Nelson's logics, evidentiary interpretations)
-* https://sartemov.ws.gc.cuny.edu/files/2013/01/Vienna2011-FOLP.pdf (FOLP, Paracompleteness, LJ + predicates, Inconsistent Tolerance)
+* https://sartemov.ws.gc.cuny.edu/files/2013/01/Vienna2011-FOLP.pdf (FOLP, Paracompleteness, LJ + predicates, Inconsistency Tolerance)
 * https://www.youtube.com/watch?v=9ZqcTEX4v9E (Assertion and Denial)
 * https://arxiv.org/abs/1103.4324v3 (Review of Paraconsistent Systems)
 * https://sites.ualberta.ca/~francisp/Phil428/Phil428.11/PostPellMartin.pdf (Functional Completeness)
