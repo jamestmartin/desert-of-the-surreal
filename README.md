@@ -32,7 +32,7 @@ Theses:
 * (Thesis) There is a dilemma between dependent types, the fire triangle of dependent types, and an interpretation of quantum computation as a hidden-variable theory.
 * (Thesis) There is a paraconsistent alternative to the metalinguistic hierarchy based on the problems of definability of truth and definability of falsity in paraconsistent systems.
 
-A system is called a paraconsistent system to some degree if it invalidates (or invalidates-by-epislon-degrees) any of the following:
+A system is called a paraconsistent system to some degree if it invalidates (or invalidates-by-epsilon-degrees) any of the following:
 Logic explosion in the object system
 * Non Contradiction on the right hand side of the turnstile in the object system
 * Non Contradiction on the left hand side of the turnstile in the object system
@@ -40,7 +40,7 @@ Logic explosion in the object system
 * (conjectured) Non Contradiction on the right hand side of the turnstile in the metasystem
 * (conjectured) Non Contradiction on the left hand side of the turnstile in the metasystem
 
-A system is called a paracomplete system to some degree if it invalidates (or invalidates-by-epislon-degrees) any of the following:
+A system is called a paracomplete system to some degree if it invalidates (or invalidates-by-epsilon-degrees) any of the following:
 (conjectured) Law of indiscernibles in the object system
 * Excluded Middle on the right hand side of the turnstile in the object system
 * Excluded Middle on the left hand side of the turnstile in the object system
