@@ -26,7 +26,7 @@ have this property: `A → ¬¬A`.
 
 #### Falsity-preserving
 If `Γ ⊢ Δ`, then `Δ` is at most as true as `Γ`.
-Proofs (or more accurately, refutations) concliding in falsity-preserving entailment correspond with codeduction.
+Proofs (or more accurately, refutations) concluding in falsity-preserving entailment correspond with codeduction.
 
 Codeduction may be intuitively explained as the form of reasoning used by the scientific method.
 This form of reasoning is explained intuitively and concisely by [Richard Feynman's lecture on the scientific method](https://www.youtube.com/watch?v=EYPapE-3FRw).
