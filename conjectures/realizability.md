@@ -90,7 +90,71 @@ Alternatively, if we used `em`, then we have no information, period.
 Therefore, if we use `⅋` to define `→`, we can no longer reduce `B` to canonical form, for all `B`.
 Therefore, any `B` can at most consistute mere existence of a `B`, not an actual value of `B`.
 
+The above points may have seemed unnecessary, and perhaps even obvious.
+However, making explicit the asymmetry of entailment and the distinction
+between existence, mere existence, and mere non-existence is necessary
+to explain the proof semantics of the rest of our type theories.
+(It will only continue to grow deeper.)
+
 ### Dual Intuitionistic Type Theory
+Dual intuitionistic type theory is described by entailments `x : A ⊢ Δ` where `x` is a coterm of type `A`
+and `Δ` is a context of copremises which assign types to covariables.
+
+Okay, so what is all of this "co" nonsense. First of all, a coterm looks *exactly* like a term.
+It's a tree which represents a deductive proof, just like terms are trees represent deductive proofs.
+The *only* difference is that whereas a term is a semantically proof of something on the *right*-hand side of the context,
+coterm is semantically a proof of something on the *left*-hand side.
+
+So what does it mean to prove something on the left-hand side?
+A coterm of type `A` is like a term of type `¬A` in that it has a canonical form,
+and that it's a statement about how to get rid of an `A`.
+However, whereas a term of type `¬A` proves the *mere* non-existence of `A`,
+a coterm of type `A` describes the *actual* non-existence of `A`.
+
+However, non-existence isn't the whole picture, so I should explain what the *actual* part means.
+A coterm of type `A` isn't so much a proof that `A` is impossible as a procedure to *eliminate* an `A`.
+If `A` contains negative types such as `¬B` (which are comparable to terms of type `¬¬B` in intuitionistic type theory),
+then in reality we are not describing a proof of non-existence so much as
+a means to deconstruct an `A` into a `B`.
+It gives us a way to concretely describe the ways in which a (co)inductive type may be eliminated.
+
+It's unintuitive, and I don't know what to say to magically make it make sense.
+I suggest that you bang your head against the rules and examples until it makes sense;
+if you're lucky, then someone has written a nice blog post or Q&A site answer
+of a higher-quality than "a coterm is like a burrito...".
+
+To understand what a coterm looks like, it may help to look at its canonical form.
+A coterm is in canonical form if it is constructed explicitly from the type's *eliminators*.
+
+Note that in intuitionistic type theory, a type's eliminators are quantified over implication, for example
+`∀ C → (A → C) → (B → C) → A ⊕ B → C`. This awkwardness is a result of being restricted
+to single terms on the right-hand side, but dual intuitionistic eliminators are not so awkward.
+Although this **is not the actual rule**, the dual intuitionistic eliminator
+looks more similar to the intuitionistic type `¬A → ¬B → ¬(A ⊕ B)`.
+Conversely, dual intuitionistic constructors are awkward in the same way intuitionistic eliminators are awkward.
+
+Thus, syntactically, a canonical coterm strongly resembles a canonical term.
+In fact, it strongly resembles the constructor of its intuitionistic dual, specifically.
+
+For the same reasons as intuitionistic type theory, `¬A` represents mere evidence regarding `A`.
+However, whereas in intuitionistic type theory `¬A` is mere evidence for the *non*-existence of `A`,
+in dual intuitionistic type theory, `¬A` is mere evidence for the *existence* of `A`,
+similarly to intuitionistic type theory's `¬¬A`.
+
+Dual intuitionistic's native form of implication is actually `A / B`
+(read "A excludes B" and written by some other authors as `←` or `−`), not `→`.
+Classically, `A / B` is defined as to `A ⊗ ¬B` (keeping in mind that everything is negative here
+relative to intuitionistic logic; in intuitionistic logic, we would have `A / B` as comparable to `¬(A ⊗ ¬B)`).
+
+A dual argument to intuitionistic logic about the problems of various connectives applies to dual intuitionistic logic.
+In particular:
+* `⊗` is useless, but on the other hand,`⅋` is a perfectly functional connective in dual intuitionistic logic, thank you very much.
+* Double negation introduction `¬¬A / A` and non-contradiction `A ⊗ ¬A` are problematic,
+  whereas `A / ¬¬A` and the excluded middle `A ⅋ ¬A` are theorems.
+
+TODO: Explain `→` in dual intuitionistic logic, and the new connective, `/`, in intuitionistic logic.
+Is it boring and equivalent to `¬(¬A ⅋ B)`, or is it an exciting way to describe an
+analog to that type which constitutes actual evidence rather than mere evidence?
 
 ## Term Syntax
 
