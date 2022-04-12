@@ -34,7 +34,7 @@ This form of reasoning is explained intuitively and concisely by [Richard Feynma
 In some sense, when reasoning using a falsity-preserving logic, you begin with a hypothesis (your premise)
 and try to discover the consequences of that hypothesis (your conclusion),
 with the goal of finding out the ways in which your hypothesis may be wrong,
-so that you may reformulate your hypothesis in a way such that it will no longer be wrong.
+so that you may reformulate your hypothesis in a way such that it will no longer be (provably) wrong.
 
 Connectives which reflect falsity-preserving entailment, such as (double) negation in cointuitionistic logic,
 have this property: `¬¬A → A`.
@@ -49,6 +49,12 @@ nor refuting a false conclusion from a true premise.
 In addition to being compatible with both truth-preserving and falsity-preserving modes of reasoning,
 degree-preserving entailment may also preserve more sophisticated truth values than "true" or "false".
 (TODO: Elaborate.)
+
+Lq is a sort of non-commutative or order logic and a sort of compensatory fuzzy logic; Lq is not a T-norm fuzzy logic.
+
+We can immediately partition sorts of degree-preserving entailment or refutation systems into those which are compensatory or non-compensatory.
+
+(TODO: verify) T-norm fuzzy logics are non-compensatory fuzzy logics.
 
 ### Axioms
 The property of axioms describes which variants of the identity axiom are valid.
@@ -117,8 +123,14 @@ but the details are not yet clear.
 Some of these results are described in another document.
 (TODO: Verify, clarify, elaborate.)
 
+The family of non-commutatitve also called order logics or systems are sorts of substructural logic in which the exchange structural rule does not hold, but in which weakening or contraction may hold; these are entirely outside Sambin's Cube.
+
+Technically, the Hilbert Style logics (natural deduction) are in general substructural in the sense that cut does not hold.
+
 #### Nonstructural
-In nonstructural systems, neither contraction nor weakening hold.
+In nonstructural systems of Sambin's cube, neither contraction nor weakening hold.
+Lq is the only known non-structural system in which none of contraction, weakening, or exchange hold.
+Remains to be seen whether or not a sensible system can be made in which none of contraction, weakening, exchange, or cut hold.
 
 ### Context-handedness
 Our primary reference for context-handedness is ["Basic logic: reflection, symmetry, visibility."](https://www.math.unipd.it/~sambin/txt/SBF.pdf).
@@ -154,6 +166,7 @@ We conjecture the existence of several logics outside these, including those wit
   * may be related to interval types; Lnq may be related to higher paths
   * alternative logics sitting at the "top" adjacent to systems like LK, e.g. LJ with intervals
 * unclear how fuzzy logics fit in
+  * Lq relates to fuzzy logics by its compensatory form of assertion degrees and relates to Sambin's logic by being a reduction of Sambin's logic by removal of the permutation/exchange structural rule; this puts Lq in the family of substructural logics but outside Sambin's cube. 
 
 The framework may need to be generalized to fit some of these proposed extensions
 in addition to the new logics which the framework appears to predict.
