@@ -96,6 +96,13 @@ between existence, mere existence, and mere non-existence is necessary
 to explain the proof semantics of the rest of our type theories.
 (It will only continue to grow deeper.)
 
+Side-note: although morally, `¬A` is irrelevant, in programming languages which
+take some liberties in their correspondence with type theory (e.g. languages like Haskell),
+it is not necessarily entirely irrelevant; it may perform side-effects or get caught in an infinite loop.
+Of course, it makes no difference in a consistent theory, but many programming languages are inconsistent
+because many forms of inconsistency (such as turing-completeness) are desirable from a programming point of view,
+while having relatively small harmful effects for the most part.
+
 ### Dual Intuitionistic Type Theory
 Dual intuitionistic type theory is described by entailments `x : A ⊢ Δ` where `x` is a coterm of type `A`
 and `Δ` is a context of copremises which assign types to covariables.
@@ -155,6 +162,100 @@ In particular:
 TODO: Explain `→` in dual intuitionistic logic, and the new connective, `/`, in intuitionistic logic.
 Is it boring and equivalent to `¬(¬A ⅋ B)`, or is it an exciting way to describe an
 analog to that type which constitutes actual evidence rather than mere evidence?
+
+### Structural Basic Type Theory
+TODO: This is a stub.
+
+In basic type theory, both the left-hand side and the right-hand side of entailment correspond with (co)terms.
+`x : A ⊢ Δ` is a coterm, whereas `Γ ⊢ x : A` is a term. Both represent actual evidence.
+Both have canonical forms corresponding with their canonical forms in (dual) intuitionistic type theory.
+
+`¬A` still represents mere evidence, but interestingly enough, there are two inequivalent negations:
+`A → ⊥`, intuitionistic negation, and `1 / A`, dual intuitionistic negation.
+Due to handedness of the implications, intuitionistic negation tends to have semantics on the right-hand side
+whereas dual intuitionistic negation has semantics on the left-hand side, where
+they respectively represent mere non-existence, and mere existence.
+
+Connectives are diminished in strength relative to their (dual) intuitionistic counterparts.
+
+Basic type theory is very weak, but it is interesting because of its
+compatibility with both intuitionistic and dual intuitionistic type theory.
+
+### Classical Linear Type Theory
+TODO: This is very incomplete and in dire need of clarification and elaboration.
+
+In classical linear type theory, because of the ambidexterous context,
+proofs no longer can be described in terms of tree-shaped terms; instead, terms must be represented as an acyclic graph.
+
+Classical linear type theory no longer has canonical forms in general,
+and intermediate reductions (applications of cut) no longer necessarily have representations as terms. (TODO: Verify.)
+However, interestingly, closed terms and coterms which correspond with types in (dual) intuitionistic type theory
+(i.e. no `⅋` or resp. `⊗` or `¬`) *still keep their canonical forms*!
+
+This is because of how we assign computational semantics to LEM and NC.
+Terms of `A ⅋ B` or `A ⊗ B` correspond semantically with threads and synchronous messaging (or coroutines).
+Types correspond with channels. `lem : ⊢ ¬A ⅋ A` creates two threads and a channel `¬A ⅋ A` which they use
+to communicate. `nc : ¬A ⊗ A ⊢` sends a message of type `A` (represented like a term) to the channel `¬A`, or alternatively,
+a message of type `¬A` (represented like a coterm) to the channel `A`.
+More generally, you can use an eliminator (resp. constructor) to reduce a type `¬A` (resp. `A`) to a smaller type without satisfying
+the entire channel all at once, so messages are synchronous. If a type contains negations, it represents a
+back-and-forth synchronous communication between the threads instead of entirely unidirectional.
+Dependent types can be understood as messages whose content depends on previous messages,
+which is how message-passing usually works in practice.
+
+Anyway, because of linearity, you cannot simply *discard* a `¬A` introduced by LEM.
+If a `¬A` does not occur in the type of a closed (co)term, then that means it necessarily has
+been satisfied, and the corresponding thread has terminated and fully produced a value of type `A`.
+Thus, if a (co)term does not contain any `¬A` constructed in this manner, it may be understood
+as single-threaded and be fully determined according to the appropriate (dual) intuitionistic interpretation.
+
+I would strongly suggest reading up on the game semantics and resource semantics of classical linear type theory,
+and additionally the pi calculus to get an intuition for how this works.
+
+In classical linear type theory, implications are equivalent to `⊗` and `⅋` together with `¬`,
+and in this way collapse. (TODO: Verify.)
+
+### Classical (Structural) Type Theory
+TODO: This is a stub.
+
+In classical (structural) type theory, proofs can no longer be described in terms of tree-like terms.
+Terms no longer necessarily reduce to canonical forms at all;
+we may still apply the trick about message passing used by classical linear type theory
+to get *many* applications of LEM and NC to reduce, which is helpful for working with dependent types,
+but it no longer always works.
+
+In general, proofs in classical type theory represent mere evidence.
+
+### The Relationship Between Type Theories
+Proofs in basic type theory:
+* Any proof in the form `Γ ⊢ x : A` is a proof in intuitionistic type theory.
+* Any proof in the form `x : A ⊢ Δ` is a proof in dual intuitionistic type theory.
+* Any proof in the form `Γ ⊢ Δ` is a proof in classical type theory.
+* Any proof of the form `Γ ⊢ x₁ : A₁, ...` is a proof of `Γ ⊢ A₁ ⊕ ...` in structural intuitionistic type theory. (TODO: Verify.)
+* Any proof of the form `x₁ : A₁, ... ⊢ Δ` is a proof of `A₁ & ... ⊢ Δ` in dual intuitionistic type theory. (TODO: Verify.)
+
+Proofs in (dual) intuitionistic type theory (TODO: verify):
+* Any proof of the form `Γ ⊢ x : A` in intuitionistic type theory is a proof of `x : ¬A ⊢ ¬Γ` in dual intuitionistic type theory.
+* Any proof of the form `x : A ⊢ Δ` in dual intuitionistic type theory is a proof of `¬Δ ⊢ x : ¬A` in intuitionistic type theory.
+* Any proof in (dual) intuitionistic type theory is a proof in classical type theory.
+* TODO: Specific proofs in (dual) intuitionistic type theory should correspond with eliminators (constructors)
+  in the dual theory. Perhaps, in fact, eliminators (constructors) could be *defined*
+  as a special case of the translation from the dual theory?
+
+Proofs in classical linear type theory (TODO: figure out the details & verify):
+* Many proofs of the form `Γ ⊢ x : A`, especially where `Γ` contains neither `⅋` nor `¬`,
+  correspond with proofs in intuitionistic type theory.
+* Dually for dual intuitionistic logic.
+
+Proofs in substructural type theories in general:
+* Any proof in a substructural type theory is a proof in the corresponding structural type theory.
+
+TODO: A logic `A` which is strictly stronger than a logic `B` may be embedded into `B`
+by introducing a modality connective or implication connective (reflecting the entailment of `A`)
+and restricting the way `A`-implication can influence proofs in `B` (for example,
+classical logic embedded into intuitionistic logic must be placed in a proof-irrelevant
+box such as Prop or propositional truncation, where it is restricted to acting as mere evidence).
+However, this is a result of the framework, not realizability.
 
 ## Term Syntax
 
