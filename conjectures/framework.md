@@ -54,6 +54,8 @@ Lq is a sort of non-commutative or order logic and a sort of compensatory fuzzy 
 
 We can immediately partition sorts of degree-preserving entailment or refutation systems into those which are compensatory or non-compensatory.
 
+A fuzzy logic is compensatory when its degrees must compensate between each other such that the more true a proposition is the more false its corresponding negation must be.
+
 (TODO: verify) T-norm fuzzy logics are non-compensatory fuzzy logics.
 
 ### Axioms
