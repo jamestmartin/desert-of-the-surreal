@@ -26,6 +26,7 @@ Primary references for research:
 * https://projecteuclid.org/journals/notre-dame-journal-of-formal-logic/volume-43/issue-3/Paraconsistency-Everywhere/10.1305/ndjfl/1074290713.pdf (Inconsistency Tolerant Logics)
 * https://arxiv.org/abs/quant-ph/0610097 (Nonlocality as a special case of contextuality)
 * http://philsci-archive.pitt.edu/17240/1/CRPT.pdf (Counterfactual Reasoning, Contextuality)
+* https://arxiv.org/abs/1705.07918 (Contextuality, Measure of Contextuality, Linear Programming, Resource Theories)
 
 Theses:
 * (Thesis) There is a trichotomy between equational theory, computation, and polarity.
