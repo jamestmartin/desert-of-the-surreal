@@ -8,6 +8,7 @@ Compensatory Fuzzy Logic
 
 Non-structural with cut.
 EPR cut.
+Non-commutative logic aka order logic.
 
 Invalidates NC and EM.
 
