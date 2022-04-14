@@ -4,6 +4,7 @@ The hierarchies of languages correspond to a rejection of one or more of the fou
 * The languages are semantically closed.
 * The ordinary (classical) rules of logic hold for the languages.
 * The languages have some mechanism allowing self-reference.
+http://people.cs.uchicago.edu/~kaharris/phil525/week_1/paradox.html
 
 ## Classical Hierarchies of Languages
 In the literature, the two kinds of hierarchy that are explicitly considered in the context of Tarskian semantic theory are those that reject either:
