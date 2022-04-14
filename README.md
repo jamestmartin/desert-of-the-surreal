@@ -1,34 +1,43 @@
 # desert-of-the-surreal
 Paracomplete_and_Paraconsistent_Co_and_Dual_and_codual_MetaSystem_Type_Theory_Project
 
-Primary references for research:
-* https://arxiv.org/abs/1003.5976 (Quantum metalanguage, qubits, paraconsistency, and paracompleteness)
-* https://projecteuclid.org/journalArticle/Download?urlId=10.1305%2Fndjfl%2F1039886520 (The system LDJ)
-* https://link.springer.com/article/10.1007/s11225-005-8474-7 (LDJ and its relations to Nelson's logics)
-* https://research.uca.ac.uk/2985/1/SCCL(Final).pdf (The system coLJ)
-* https://www.pauldownen.com/publications/downen_phd.pdf (the substructural system L which appears to be a combination of Sambin's Basic Logic as a Type Theory and its dual/co?)
+## Primary references for research:
+### Fuzzy Paraconsistent Systems
+* https://arxiv.org/abs/1003.5976 (Lq, L2q, Lnq, Quantum metalanguage, qubits, paraconsistency, and paracompleteness)
 * https://math.ucr.edu/home/baez/quantum/node3.html (category theory and Hilbert Spaces; related paper to find: the category of Hilbert spaces is self-dual)
-* https://www.math.unipd.it/~sambin/txt/SBF.pdf (Sambin et al, Basic Sequent Logic, paraconsistency and paracompleteness)
-* https://hal.archives-ouvertes.fr/hal-02383109/document (fire triangle of dependent type theories)
-* http://people.cs.uchicago.edu/~kaharris/phil525/week_1/paradox.html (Tarski T-Schema, definability of truth, classical logic)
-* https://arxiv.org/abs/quant-ph/0701171 (Metatheorem for the Liar's Paradox and T-Schema in non-structural systems like Lq)
-* https://grahampriest.net/?ddownload=865 (Paraconsistent metalanguage and semantics)
-* http://www.mbph.de/Logic/Para/SemanticClosure.pdf (Paraconsistency and semantic closure)
-* https://www.irishmathsoc.org/bull23/bull23_8-21.pdf (Paraconsistency, Classical Completeness as Dilemma)
-* http://lna.unb.br/lna_n01_01_gpriest.pdf (Paraconsistency, Classical Completeneess as Dilemma)
-* http://people.cs.uchicago.edu/~kaharris/phil525/week_1/consistent.html (Semantically Closed Classical System)
-* http://people.cs.uchicago.edu/~kaharris/phil525/negation.pdf (Semantics of Classical Negation)
-* https://www.impan.pl/~kz/truthseminar/Kripke_Outline.pdf (Kripke Theory of Truth)
-* http://tsinghualogic.net/JRC/wp-content/uploads/2016/06/China_MT2_2016.pdf (Hintikka Sets, classical model theory, and consistency)
-* https://scholarworks.uno.edu/cgi/viewcontent.cgi?article=1057&context=honors_theses (Definability of Truth)
 * http://library.utia.cas.cz/separaty/2016/MTR/noguera-0469166.pdf (fuzzy logics, paraconsistency, degree-preserving entailment, definition of Boldly Paraconsistent, LFI)
+
+### Definitions of the Properties of Paraconsistent or Paracomplete Systems 
 * https://www.sciencedirect.com/science/article/pii/S1571066120300827 (Definition of Genuine Paraconsistency and Genuine Paracompleteness)
 * https://projecteuclid.org/journals/notre-dame-journal-of-formal-logic/volume-43/issue-3/Paraconsistency-Everywhere/10.1305/ndjfl/1074290713.pdf (Inconsistency Tolerant Logics)
+* https://grahampriest.net/?ddownload=865 (Paraconsistent metalanguage and semantics)
+* https://www.irishmathsoc.org/bull23/bull23_8-21.pdf (Paraconsistency, Classical Completeness as Dilemma)
+* http://lna.unb.br/lna_n01_01_gpriest.pdf (Paraconsistency, Classical Completeneess as Dilemma)
+* https://hal.archives-ouvertes.fr/hal-02383109/document (fire triangle of dependent type theories)
+* http://tsinghualogic.net/JRC/wp-content/uploads/2016/06/China_MT2_2016.pdf (Hintikka Sets, classical model theory, and consistency)
 * https://arxiv.org/abs/quant-ph/0610097 (Nonlocality as a special case of contextuality)
 * http://philsci-archive.pitt.edu/17240/1/CRPT.pdf (Counterfactual Reasoning, Contextuality)
 * https://arxiv.org/abs/1705.07918 (Contextuality, Measure of Contextuality, Linear Programming, Resource Theories)
 
-Theses:
+### Specific System Definitions in Sambin's Cube
+* https://projecteuclid.org/journalArticle/Download?urlId=10.1305%2Fndjfl%2F1039886520 (The system LDJ)
+* https://link.springer.com/article/10.1007/s11225-005-8474-7 (LDJ and its relations to Nelson's logics)
+* https://research.uca.ac.uk/2985/1/SCCL(Final).pdf (The system coLJ)
+* https://www.math.unipd.it/~sambin/txt/SBF.pdf (Sambin et al, Basic Sequent Logic, paraconsistency and paracompleteness)
+* https://www.pauldownen.com/publications/downen_phd.pdf (the substructural system L which appears to be a combination of Sambin's Basic Logic as a Type Theory and its dual/co?)
+
+### Semantic Specifications
+* http://people.cs.uchicago.edu/~kaharris/phil525/week_1/paradox.html (Tarski T-Schema, definability of truth, classical logic)
+* https://macsphere.mcmaster.ca/bitstream/11375/13863/1/fulltext.pdf (Tarski's Hierachy of Languages and Metalanguages)
+* https://arxiv.org/abs/quant-ph/0701171 (Metatheorem for the Liar's Paradox and T-Schema in non-structural systems like Lq)
+* http://www.mbph.de/Logic/Para/SemanticClosure.pdf (Paraconsistency and semantic closure)
+* http://people.cs.uchicago.edu/~kaharris/phil525/week_1/consistent.html (Semantically Closed Classical System)
+* http://people.cs.uchicago.edu/~kaharris/phil525/negation.pdf (Semantics of Classical Negation)
+* https://www.impan.pl/~kz/truthseminar/Kripke_Outline.pdf (Kripke Theory of Truth)
+* https://scholarworks.uno.edu/cgi/viewcontent.cgi?article=1057&context=honors_theses (Definability of Truth)
+
+
+## Theses:
 * (Thesis) There is a trichotomy between equational theory, computation, and polarity.
 * (Thesis) There is a dilemma between dependent types, the fire triangle of dependent types, and an interpretation of quantum computation as a hidden-variable theory.
 * (Thesis) There is a paraconsistent alternative to the metalinguistic hierarchy based on the problems of definability of truth and definability of falsity in paraconsistent systems.
@@ -67,7 +76,7 @@ For each of the systems expressed in the cube of extensions of Sambin's Basic Lo
 https://proofassistants.stackexchange.com/a/713"
 
 
-Secondary References:
+## Secondary References:
 * https://core.ac.uk/download/pdf/162572056.pdf (Fuzzy multisets)
 * https://www.researchgate.net/publication/221320313_Fuzzy_Multisets_and_Their_Generalizations
 * https://www.researchgate.net/publication/230657496_On_Generalized_Fuzzy_Multisets_and_their_Use_in_Computation
@@ -91,5 +100,5 @@ Secondary References:
 * https://www.cs.yale.edu/homes/piskac/teaching/decpro-729/fol.pdf (First Order Logic, Substitution)
 
 
-To be investigated but possibly relevant:
+## To be investigated but possibly relevant:
 * https://logic.rwth-aachen.de/Research/AlMoTh/index.html.en (finite model theory and algorithmic theory is particular relevant for substructural or non-structural systems, polarity)
