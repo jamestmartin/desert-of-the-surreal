@@ -15,6 +15,14 @@ In the literature, the two kinds of hierarchy that are explicitly considered in 
 The rejection of self-reference produces the Simple Hierarchy of Languages.
 The rejection of semantic closure produces the standard Tarskian Hierarchy of Classical Languages.
 
+### Simple Hierarchy of Languages
+Harris and Zizzi both demonstrate methods of devising systems which have restricted self-reference or have restricted methods of naming that are not quite as drastic as the examples given by Tarski or by Moore.
+
+Lq and its quantum metalanguage are in this hierarchy of langauges.
+
+https://arxiv.org/abs/quant-ph/0701171
+http://people.cs.uchicago.edu/~kaharris/phil525/week_1/consistent.html
+
 ### Standard Tarskian Hierarchy of Classical Languages
 Whatever level of language we attempt to express the structure of the entire hierarchy in, we must concede one of three points: either 
 
