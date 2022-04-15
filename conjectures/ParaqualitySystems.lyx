@@ -204,7 +204,7 @@ Logical Explosion
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\dfrac{\neg y\vdash\neg\left(x\vee\neg x\right)}{x\wedge\neg x\vdash y}
+\dfrac{\neg y\vdash\neg\left(x\wedge\neg x\right)}{x\wedge\neg x\vdash y}
 \]
 
 \end_inset
@@ -219,7 +219,7 @@ Contradictory Consequence
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\dfrac{\neg\left(x\vee\neg x\right)\vdash\neg y}{y\vdash x\wedge\neg x}
+\dfrac{\neg\left(x\wedge\neg x\right)\vdash\neg y}{y\vdash x\wedge\neg x}
 \]
 
 \end_inset
