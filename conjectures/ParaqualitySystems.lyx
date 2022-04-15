@@ -127,7 +127,18 @@ Indiscernibility of Identicals
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\dfrac{\exists F\left(Fx\oplus Fy\right)\vdash x\not=y}{x=y\vdash\forall F\left(Fx\leftrightarrow Fy\right)}
+\dfrac{\neg\forall F\left(Fx\leftrightarrow Fy\right)\vdash\neg\left(x=y\right)}{x=y\vdash\forall F\left(Fx\leftrightarrow Fy\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{\exists F\left(Fx\not\leftrightarrow Fy\right)\vdash x\not=y}{x=y\vdash\forall F\left(Fx\leftrightarrow Fy\right)}
 \]
 
 \end_inset
@@ -142,7 +153,33 @@ Identity of Indiscernibles
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\dfrac{x\not=y\vdash\exists F\left(Fx\oplus Fy\right)}{\forall F\left(Fx\leftrightarrow Fy\right)\vdash x=y}
+\dfrac{\neg\left(x=y\right)\vdash\neg\forall F\left(Fx\leftrightarrow Fy\right)}{\forall F\left(Fx\leftrightarrow Fy\right)\vdash x=y}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{x\not=y\vdash\exists F\left(Fx\not\leftrightarrow Fy\right)}{\forall F\left(Fx\leftrightarrow Fy\right)\vdash x=y}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Excluded Middle
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{\neg\left(x\vee\neg x\right)\vdash\neg\top}{\bot\vdash x\vee\neg x}
 \]
 
 \end_inset
@@ -167,7 +204,7 @@ Logical Explosion
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\dfrac{\neg y\vdash\neg x\vee x}{x\wedge\neg x\vdash y}
+\dfrac{\neg y\vdash\neg\left(x\vee\neg x\right)}{x\wedge\neg x\vdash y}
 \]
 
 \end_inset
@@ -182,7 +219,22 @@ Contradictory Consequence
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\dfrac{\neg x\vee x\vdash\neg y}{y\vdash x\wedge\neg x}
+\dfrac{\neg\left(x\vee\neg x\right)\vdash\neg y}{y\vdash x\wedge\neg x}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Non-Contradiction
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{\neg\bot\vdash\neg\left(x\wedge\neg x\right)}{x\wedge\neg x\vdash\bot}
 \]
 
 \end_inset
