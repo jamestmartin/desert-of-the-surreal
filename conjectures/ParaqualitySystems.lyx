@@ -127,7 +127,7 @@ Indiscernibility of Identicals
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\dfrac{\dfrac{\exists x\exists y\left[x=y\wedge\exists F\left(Fx\oplus Fy\right)\right]\vdash\bot}{\exists x\exists y\left[x=y\not\rightarrow\forall F\left(Fx\leftrightarrow Fy\right)\right]\vdash\bot}}{\vdash\forall x\forall y\left[x=y\rightarrow\forall F\left(Fx\leftrightarrow Fy\right)\right]}
+\dfrac{\exists F\left(Fx\oplus Fy\right)\vdash x\not=y}{x=y\vdash\forall F\left(Fx\leftrightarrow Fy\right)}
 \]
 
 \end_inset
@@ -142,7 +142,7 @@ Identity of Indiscernibles
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\dfrac{\dfrac{\exists x\exists y\left[\exists F\left(Fx\leftrightarrow Fy\right)\wedge x\not=y\right]\vdash\bot}{\exists x\exists y\left[\exists F\left(Fx\leftrightarrow Fy\right)\not\rightarrow x=y\right]\vdash\bot}}{\vdash\forall x\forall y\left[\forall F\left(Fx\leftrightarrow Fy\right)\rightarrow x=y\right]}
+\dfrac{x\not=y\vdash\exists F\left(Fx\oplus Fy\right)}{\forall F\left(Fx\leftrightarrow Fy\right)\vdash x=y}
 \]
 
 \end_inset
@@ -167,7 +167,7 @@ Logical Explosion
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\dfrac{\exists x\exists y\left[\left(x\wedge\neg x\right)\wedge\neg y\right]\vdash\bot}{\vdash\forall x\forall y\left[\left(x\wedge\neg x\right)\rightarrow y\right]}
+\dfrac{\neg y\vdash\neg x\vee x}{x\wedge\neg x\vdash y}
 \]
 
 \end_inset
@@ -176,24 +176,13 @@ Logical Explosion
 \end_layout
 
 \begin_layout Subsection
-Logical Trivialization
+Contradictory Consequence
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\dfrac{\exists x\exists y\left[y\wedge\left(\neg x\vee x\right)\right]\vdash\bot}{\vdash\forall x\forall y\left[y\rightarrow\left(x\wedge\neg x\right)\right]}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-\dfrac{\dfrac{\exists x\exists y\left[y\wedge\left(\neg x\vee x\right)\right]\vdash\bot}{\vdash\forall x\forall y\left[\left(\neg x\vee x\right)\rightarrow\neg y\right]}}{\vdash\forall x\forall y\left[\neg\left(x\wedge\neg x\right)\rightarrow\neg y\right]}
+\dfrac{\neg x\vee x\vdash\neg y}{y\vdash x\wedge\neg x}
 \]
 
 \end_inset
