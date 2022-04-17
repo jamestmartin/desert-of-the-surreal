@@ -5,6 +5,7 @@ Paracomplete_and_Paraconsistent_Co_and_Dual_and_codual_MetaSystem_Type_Theory_Pr
 ### Fuzzy Paraconsistent Systems
 * https://arxiv.org/abs/1003.5976 (Lq, L2q, Lnq, Quantum metalanguage, qubits, paraconsistency, and paracompleteness)
 * https://math.ucr.edu/home/baez/quantum/node3.html (category theory and Hilbert Spaces; related paper to find: the category of Hilbert spaces is self-dual)
+* http://www.inf.ed.ac.uk/teaching/courses/cqi/5-dualobjects.pdf (Finite Hilbert Space Self-Duality)
 * http://library.utia.cas.cz/separaty/2016/MTR/noguera-0469166.pdf (fuzzy logics, paraconsistency, degree-preserving entailment, definition of Boldly Paraconsistent, LFI)
 
 ### Definitions of the Properties of Paraconsistent or Paracomplete Systems 
