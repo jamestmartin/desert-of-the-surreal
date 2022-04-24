@@ -51,5 +51,6 @@ Two other forms of hierarchy are possible but less well defined in the literatur
 
 * The hierarchy of non-consistent languages which necessarily concerns those object languages and metalanguages that have either inconsistent or paraconsistent semantics or syntax.
 * The hierarchy of non-classical or non-deductive languages.
+  * Kripke's Theory of Intuitionistic Truth and Transfinite Hierarchy of Intuitionistic Languages. https://www.impan.pl/~kz/truthseminar/Kripke_Outline.pdf
 
 We can posit the existence of additional derivable varieties of hierarchies which reject more than one of the four conditions.
