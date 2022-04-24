@@ -46,21 +46,30 @@ Paracomplete_and_Paraconsistent_Co_and_Dual_and_codual_MetaSystem_Type_Theory_Pr
 * (Thesis) There is a dilemma between dependent types, the fire triangle of dependent types, and an interpretation of quantum computation as a hidden-variable theory.
 * (Thesis) There is a paraconsistent alternative to the metalinguistic hierarchy based on the problems of definability of truth and definability of falsity in paraconsistent systems.
 
-A system is called a paraconsistent system to some degree if it invalidates (or invalidates-by-epsilon-degrees) any of the following:
-* Logic explosion in the object system
+A system is called a syntactically paraconsistent system to some degree if it invalidates (or invalidates-by-epsilon-degrees) any of the following:
+* Law of Duns Scotus in the object system
 * Non Contradiction on the right hand side of the turnstile in the object system
 * Non Contradiction on the left hand side of the turnstile in the object system
-* (conjectured) Logic explosion in the metasystem
-* (conjectured) Non Contradiction on the right hand side of the turnstile in the metasystem
-* (conjectured) Non Contradiction on the left hand side of the turnstile in the metasystem
 
-A system is called a paracomplete system to some degree if it invalidates (or invalidates-by-epsilon-degrees) any of the following:
-* (conjectured) Law of indiscernibles in the object system
+A system is called a semantically paraconsistent system to some degree if it invalidates (or invalidates-by-epsilon-degrees) any of the following:
+* Law of Duns Scotus in the metasystem or in its formal semantics
+* Bivalence on the right hand side of the turnstile in the metasystem or in its formal semantics
+* Bivalence on the left hand side of the turnstile in the metasystem or in its formal semantics
+
+A system is called a syntactically paracomplete system to some degree if it invalidates (or invalidates-by-epsilon-degrees) any of the following:
+* Law of Clavius in the object system
 * Excluded Middle on the right hand side of the turnstile in the object system
 * Excluded Middle on the left hand side of the turnstile in the object system
+
+A system is called a semantically paracomplete system to some degree if it invalidates (or invalidates-by-epsilon-degrees) any of the following:
+* Law of Clavius in the metasystem or in its formal semantics
+* Bivalence on the right hand side of the turnstile in the metasystem or in its formal semantics
+* Bivalence on the left hand side of the turnstile in the metasystem or in its formal semantics
+
+A system is called a paracomplete and paraconsistent system to some degree if it satisfies at least one condition from each of the paraconsistent and paracomplete conditions and invalidates (or invalidates-by-epsilon-degrees) any of the following.
+* (conjectured) Law of indiscernibles in the object system
 * (conjectured) Law of indiscernibles in the metasystem
-* (conjectured) Excluded Middle on the right hand side of the turnstile in the metasystem
-* (conjectured) Excluded Middle on the left hand side of the turnstile in the metasystem
+
 
 There exists a complex relationship between paracomplete and paraconsistent systems in terms of their relative duality and polarity with respect to each other.
 
