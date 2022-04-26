@@ -20,13 +20,31 @@ Paracomplete_and_Paraconsistent_Co_and_Dual_and_codual_MetaSystem_Type_Theory_Pr
 * http://philsci-archive.pitt.edu/17240/1/CRPT.pdf (Counterfactual Reasoning, Contextuality)
 * https://arxiv.org/abs/1705.07918 (Contextuality, Measure of Contextuality, Linear Programming, Resource Theories)
 
+#### Type Theories
+* https://www.math.unipd.it/~sambin/txt/MaiettiSambin-rev2.pdf (minimal type theory, extensionality incompatibility with MLTT w/ axiom of choice, powerset compatibility with extensionality and incompatibility with axiom of choice, degeneracy of intuitionism to classical logic)
+
 ### Specific System Definitions in Sambin's Cube
+#### LK
+* https://www.lix.polytechnique.fr/~lutz/papers/medial-kurz.pdf (LK, Category of LK, Systemic collapses to Boolean Algebra)
+#### LJ
+* TBD
+#### LDJ
 * https://projecteuclid.org/journalArticle/Download?urlId=10.1305%2Fndjfl%2F1039886520 (The system LDJ)
 * https://link.springer.com/article/10.1007/s11225-005-8474-7 (LDJ and its relations to Nelson's logics)
 * https://research.uca.ac.uk/2985/1/SCCL(Final).pdf (The system coLJ)
-* https://www.lix.polytechnique.fr/~lutz/papers/medial-kurz.pdf (LK, Category of LK, Systemic collapses to Boolean Algebra)
+#### BvN
+* TBD
+#### CLL
 * https://www.irif.fr/~mellies/mpri/mpri-ens/biblio/categorical-semantics-of-linear-logic.pdf (Linear Logic, Intuitionistic Linear Logic, Sequent Logic Review)
+#### ILL
+* https://www.irif.fr/~mellies/mpri/mpri-ens/biblio/categorical-semantics-of-linear-logic.pdf (Linear Logic, Intuitionistic Linear Logic, Sequent Logic Review)
+#### DILL
+* TBD
+#### B/B'
 * https://www.math.unipd.it/~sambin/txt/SBF.pdf (Sambin et al, Basic Sequent Logic, paraconsistency and paracompleteness)
+* https://arxiv.org/abs/1910.05120 (Refinement on the connectives for Basic Sequent Logic, reflection = derivability of identicals)
+* https://www.researchgate.net/profile/Kiarash-Rahmani/publication/266560337_A_Proof_of_Cut-Elimination_Theorem_for_U_Logic/links/54c3514e0cf256ed5a9117dc/A-Proof-of-Cut-Elimination-Theorem-for-U-Logic.pdf (B', U, and subintuitionistic cube of extensions)
+#### Misc
 * https://www.pauldownen.com/publications/downen_phd.pdf (the substructural system L which appears to be a combination of Sambin's Basic Logic as a Type Theory and its dual/co?)
 * https://prooftheory.blog/2021/09/23/confluence-in-the-sequent-calculus/ (Cut elimination, non-confluence of proof, proof irrelevance)
 
@@ -46,6 +64,11 @@ Paracomplete_and_Paraconsistent_Co_and_Dual_and_codual_MetaSystem_Type_Theory_Pr
 * (Thesis) There is a dilemma between dependent types, the fire triangle of dependent types, and an interpretation of quantum computation as a hidden-variable theory.
 * (Thesis) There is a paraconsistent alternative to the metalinguistic hierarchy based on the problems of definability of truth and definability of falsity in paraconsistent systems.
 
+### Preliminaries of Systems Theory
+* A system is a formal language or grammar or automata together with a formal semantic.
+* A metasystem is a formal language or grammar or automata together with a formal semantic that maps the language to the semantic or the semantic to the language of the object system where the metasystem is generally higher order than the object system.
+
+### Definitions of Paraquality Systems
 A system is called a syntactically paraconsistent system to some degree if it invalidates (or invalidates-by-epsilon-degrees) any of the following:
 * Law of Duns Scotus in the object system
 * Non Contradiction on the right hand side of the turnstile in the object system
@@ -75,6 +98,7 @@ There exists a complex relationship between paracomplete and paraconsistent syst
 
 There exists a complex relationship between paracomplete and paraconsistent systems in terms of their relative (free?) contextuality on the RHS or LHS of sequents.
 
+### Contextuality, Duality, Polarity, and Structures
 (Conjecture) Contextuality, duality, and polarity are inter-related to (co)varying degrees.
 
 These complexes of relations are expressed in the squares of oppositions between the sequent systems:
