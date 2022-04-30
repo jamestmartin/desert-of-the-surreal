@@ -43,7 +43,11 @@ Paracomplete_and_Paraconsistent_Co_and_Dual_and_codual_MetaSystem_Type_Theory_Pr
 #### B/B'
 * https://www.math.unipd.it/~sambin/txt/SBF.pdf (Sambin et al, Basic Sequent Logic, paraconsistency and paracompleteness)
 * https://arxiv.org/abs/1910.05120 (Refinement on the connectives for Basic Sequent Logic, reflection = derivability of identicals)
+
+#### U
+* https://www.researchgate.net/publication/266988362_A_unification_of_the_basic_logics_of_Sambin_and_Visser
 * https://www.researchgate.net/profile/Kiarash-Rahmani/publication/266560337_A_Proof_of_Cut-Elimination_Theorem_for_U_Logic/links/54c3514e0cf256ed5a9117dc/A-Proof-of-Cut-Elimination-Theorem-for-U-Logic.pdf (B', U, and subintuitionistic cube of extensions)
+
 #### Misc
 * https://www.pauldownen.com/publications/downen_phd.pdf (the substructural system L which appears to be a combination of Sambin's Basic Logic as a Type Theory and its dual/co?)
 * https://prooftheory.blog/2021/09/23/confluence-in-the-sequent-calculus/ (Cut elimination, non-confluence of proof, proof irrelevance)
