@@ -53,15 +53,18 @@ Paracomplete_and_Paraconsistent_Co_and_Dual_and_codual_MetaSystem_Type_Theory_Pr
 * https://prooftheory.blog/2021/09/23/confluence-in-the-sequent-calculus/ (Cut elimination, non-confluence of proof, proof irrelevance)
 
 ### Semantic Specifications
+#### Truth and Satisfiability Semantics
+* https://www.impan.pl/~kz/truthseminar/Kripke_Outline.pdf (Kripke Theory of Truth)
+* https://scholarworks.uno.edu/cgi/viewcontent.cgi?article=1057&context=honors_theses (Definability of Truth)
 * http://people.cs.uchicago.edu/~kaharris/phil525/week_1/paradox.html (Tarski T-Schema, definability of truth, classical logic)
 * https://macsphere.mcmaster.ca/bitstream/11375/13863/1/fulltext.pdf (Tarski's Hierachy of Languages and Metalanguages)
 * https://arxiv.org/abs/quant-ph/0701171 (Metatheorem for the Liar's Paradox and T-Schema in non-structural systems like Lq)
 * http://www.mbph.de/Logic/Para/SemanticClosure.pdf (Paraconsistency and semantic closure)
 * http://people.cs.uchicago.edu/~kaharris/phil525/week_1/consistent.html (Semantically Closed Classical System)
+#### Falsity and Unsatisfiability Semantics
+* https://philosophy.stackexchange.com/questions/11448/why-is-intuitionistic-negation-nonconstructive
+* https://link.springer.com/article/10.1007/s11225-005-8474-7 
 * http://people.cs.uchicago.edu/~kaharris/phil525/negation.pdf (Semantics of Classical Negation)
-* https://www.impan.pl/~kz/truthseminar/Kripke_Outline.pdf (Kripke Theory of Truth)
-* https://scholarworks.uno.edu/cgi/viewcontent.cgi?article=1057&context=honors_theses (Definability of Truth)
-
 
 ## Theses:
 * (Thesis) There is a trichotomy between equational theory, computation, and polarity.
