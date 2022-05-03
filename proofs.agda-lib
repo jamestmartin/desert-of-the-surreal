@@ -1,0 +1,4 @@
+name: darius
+include: proofs
+flags: --without-K --no-guardedness --no-sized-types --prop -W all --no-exact-split
+depend: standard-library

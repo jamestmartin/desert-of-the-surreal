@@ -3,3 +3,6 @@
 
 # Nano backup files
 \#*
+
+# Agda code
+_build/
