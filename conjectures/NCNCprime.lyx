@@ -1,0 +1,1902 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\begin_modules
+theorems-ams-chap-bytype
+theorems-ams-extended-chap-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation landscape
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Is Basic Logic Genuinely Paraconsistent and Paracomplete?
+\end_layout
+
+\begin_layout Author
+Paraconsista
+\end_layout
+
+\begin_layout Abstract
+We examine whether or not various forms of the law of non-contradiction
+ and the law of excluded middle hold in Sambin's Basic Sequent Logic.
+ We identify at least 128 distinct forms of Non-contradiction and its prime
+ form and a matching number of forms of the Excluded Middle and its prime
+ form.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Non-Contradiction and Excluded Middle in Sambin's Basic Logic
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash((A\wedge(A\vdash))\vdash)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+A\wedge(A\vdash)\vdash
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash\top\leftarrow(A\wedge(A\rightarrow0))\rightarrow0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash1\leftarrow(A\wedge(A\rightarrow0))\rightarrow0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash1\leftarrow(A\wedge(A\rightarrow0))\rightarrow\bot
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash\top\leftarrow(A\otimes(A\rightarrow0))\rightarrow0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash1\leftarrow(A\otimes(A\rightarrow0))\rightarrow0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash1\leftarrow(A\otimes(A\rightarrow0))\rightarrow\bot
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Classical Non-contradiction
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+A\otimes(A\rightarrow0),A\otimes(A\rightarrow\bot),A\wedge(A\rightarrow0),A\wedge(A\rightarrow\bot)\vdash
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash\left[\left(A\otimes(A\rightarrow0)\right)\circ\left(A\otimes(A\rightarrow\bot)\right)\circ\left(A\wedge(A\rightarrow0)\right)\circ\left(A\wedge(A\rightarrow\bot)\right)\right]\rightarrow0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash\left[\left(A\otimes(A\rightarrow0)\right)\circ\left(A\otimes(A\rightarrow\bot)\right)\circ\left(A\wedge(A\rightarrow0)\right)\circ\left(A\wedge(A\rightarrow\bot)\right)\right]\rightarrow\bot
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Classical Excluded Middle
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash\left(A\wp(1\leftarrow A)\right)\circ\left(A\wp(\top\leftarrow A)\right)\circ\left(A\vee(1\leftarrow A)\right)\circ\left(A\vee(\top\leftarrow A)\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+1\leftarrow\left[\left(A\wp(1\leftarrow A)\right)\circ\left(A\wp(\top\leftarrow A)\right)\circ\left(A\vee(1\leftarrow A)\right)\circ\left(A\vee(\top\leftarrow A)\right)\right]\vdash
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\top\leftarrow\left[\left(A\wp(1\leftarrow A)\right)\circ\left(A\wp(\top\leftarrow A)\right)\circ\left(A\vee(1\leftarrow A)\right)\circ\left(A\vee(\top\leftarrow A)\right)\right]\vdash
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Paraconsistent and Paracomplete forms of truth
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash0\rightarrow A
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash\bot\rightarrow A
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash1\rightarrow A
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash\top\rightarrow A
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+A\leftarrow0\dashv
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+A\leftarrow\bot\dashv
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+A\leftarrow1\dashv
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+A\leftarrow\top\dashv
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+NC in Basic Sequent Logic
+\end_layout
+
+\begin_layout Subsubsection
+Additive NC
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left[A\wedge\left(1\leftarrow A\right)\right]\vdash
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left[A\wedge\left(\top\leftarrow A\right)\right]\vdash
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left[A\wedge\left(A\rightarrow0\right)\right]\vdash
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left[A\wedge\left(A\rightarrow\bot\right)\right]\vdash
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Multiplicative NC
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left[A\otimes\left(1\leftarrow A\right)\right]\vdash
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left[A\otimes\left(\top\leftarrow A\right)\right]\vdash
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left[A\otimes\left(A\rightarrow0\right)\right]\vdash
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left[A\otimes\left(A\rightarrow\bot\right)\right]\vdash
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+NC' in Basic Sequent Logic
+\end_layout
+
+\begin_layout Subsubsection
+Additive NC'
+\end_layout
+
+\begin_layout Paragraph
+Excluding 1
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash\left[A\wedge\left(1\leftarrow A\right)\right]\rightarrow0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash\left[A\wedge\left(1\leftarrow A\right)\right]\rightarrow\bot
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash1\leftarrow\left[A\wedge\left(1\leftarrow A\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash\top\leftarrow\left[A\wedge\left(1\leftarrow A\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Excluding Top
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash\left[A\wedge\left(\top\leftarrow A\right)\right]\rightarrow0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash\left[A\wedge\left(\top\leftarrow A\right)\right]\rightarrow\bot
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash1\leftarrow\left[A\wedge\left(\top\leftarrow A\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash\top\leftarrow\left[A\wedge\left(\top\leftarrow A\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Including 0
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash\left[A\wedge\left(A\rightarrow0\right)\right]\rightarrow0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash\left[A\wedge\left(A\rightarrow0\right)\right]\rightarrow\bot
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash1\leftarrow\left[A\wedge\left(A\rightarrow0\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash\top\leftarrow\left[A\wedge\left(A\rightarrow0\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Including Bottom
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash\left[A\wedge\left(A\rightarrow\bot\right)\right]\rightarrow0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash\left[A\wedge\left(A\rightarrow\bot\right)\right]\rightarrow\bot
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash1\leftarrow\left[A\wedge\left(A\rightarrow\bot\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash\top\leftarrow\left[A\wedge\left(A\rightarrow\bot\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Multiplicative NC'
+\end_layout
+
+\begin_layout Paragraph
+Excluding 1
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash\left[A\otimes\left(1\leftarrow A\right)\right]\rightarrow0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash\left[A\otimes\left(1\leftarrow A\right)\right]\rightarrow\bot
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash1\leftarrow\left[A\otimes\left(1\leftarrow A\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash\top\leftarrow\left[A\otimes\left(1\leftarrow A\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Excluding Top
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash\left[A\otimes\left(\top\leftarrow A\right)\right]\rightarrow0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash\left[A\otimes\left(\top\leftarrow A\right)\right]\rightarrow\bot
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash1\leftarrow\left[A\otimes\left(\top\leftarrow A\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash\top\leftarrow\left[A\otimes\left(\top\leftarrow A\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Including 0
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash\left[A\otimes\left(A\rightarrow0\right)\right]\rightarrow0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash\left[A\otimes\left(A\rightarrow0\right)\right]\rightarrow\bot
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash1\leftarrow\left[A\otimes\left(A\rightarrow0\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash\top\leftarrow\left[A\otimes\left(A\rightarrow0\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Including Bottom
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash\left[A\otimes\left(A\rightarrow\bot\right)\right]\rightarrow0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash\left[A\otimes\left(A\rightarrow\bot\right)\right]\rightarrow\bot
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash1\leftarrow\left[A\otimes\left(A\rightarrow\bot\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash\top\leftarrow\left[A\otimes\left(A\rightarrow\bot\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+NC Proofs in Basic Sequent Logic
+\end_layout
+
+\begin_layout Subsubsection
+Additive NC
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+L\wedge\dfrac{A\vdash}{\left[A\wedge\left(A\rightarrow\bot\right)\right]\vdash}\qquad L\wedge\dfrac{\dfrac{\dfrac{A\vdash}{A\vdash\bot}}{A\rightarrow\bot\vdash}}{\left[A\wedge\left(A\rightarrow\bot\right)\right]\vdash}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{A\vdash}{\left[A\wedge\left(1\leftarrow A\right)\right]\vdash}\qquad\dfrac{\dfrac{\dfrac{\vdash A}{1\vdash A}}{1\leftarrow A\vdash}}{\left[A\wedge\left(1\leftarrow A\right)\right]\vdash}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{A\vdash}{\left[A\wedge\left(\top\leftarrow A\right)\right]\vdash}\qquad\dfrac{\dfrac{\top\vdash A}{\top\leftarrow A\vdash}}{\left[A\wedge\left(\top\leftarrow A\right)\right]\vdash}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{A\vdash}{\left[A\wedge\left(A\rightarrow0\right)\right]\vdash}\qquad\dfrac{\dfrac{A\vdash0}{A\rightarrow0\vdash}}{\left[A\wedge\left(A\rightarrow0\right)\right]\vdash}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Multiplicative NC
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{A,1\leftarrow A\vdash}{\left[A\otimes\left(1\leftarrow A\right)\right]\vdash}\otimes L
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{A,\top\leftarrow A\vdash}{\left[A\otimes\left(\top\leftarrow A\right)\right]\vdash}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{A,A\rightarrow0\vdash}{\left[A\otimes\left(A\rightarrow0\right)\right]\vdash}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{A,A\rightarrow\bot\vdash}{\left[A\otimes\left(A\rightarrow\bot\right)\right]\vdash}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+NC' in Basic Sequent Logic
+\end_layout
+
+\begin_layout Subsubsection
+Additive NC'
+\end_layout
+
+\begin_layout Paragraph
+Excluding 1
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{\dfrac{A\vdash0}{\left[A\wedge\left(1\leftarrow A\right)\right]\vdash0}}{\vdash\left[A\wedge\left(1\leftarrow A\right)\right]\rightarrow0}\qquad\dfrac{\dfrac{1\leftarrow A\vdash0}{\left[A\wedge\left(1\leftarrow A\right)\right]\vdash0}}{\vdash\left[A\wedge\left(1\leftarrow A\right)\right]\rightarrow0}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{\dfrac{\dfrac{A\vdash}{A\vdash\bot}}{A\wedge\left(1\leftarrow A\right)\vdash\bot}}{\vdash\left[A\wedge\left(1\leftarrow A\right)\right]\rightarrow\bot}\qquad\dfrac{\dfrac{\dfrac{\dfrac{\dfrac{\vdash A}{1\vdash A}}{1\leftarrow A\vdash}}{1\leftarrow A\vdash\bot}}{\left[A\wedge\left(1\leftarrow A\right)\right]\vdash\bot}}{\vdash\left[A\wedge\left(1\leftarrow A\right)\right]\rightarrow\bot}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{\begin{array}{c}
+\\
+\vdash1
+\end{array}\qquad\dfrac{A\vdash}{A\wedge\left(1\leftarrow A\right)\vdash}}{\vdash1\leftarrow\left[A\wedge\left(1\leftarrow A\right)\right]}\qquad\dfrac{\begin{array}{c}
+\\
+\vdash1
+\end{array}\qquad\dfrac{\dfrac{\dfrac{\vdash A}{1\vdash A}}{1\leftarrow A\vdash}}{A\wedge\left(1\leftarrow A\right)\vdash}}{\vdash1\leftarrow\left[A\wedge\left(1\leftarrow A\right)\right]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{\begin{array}{c}
+\\
+\vdash\top
+\end{array}\qquad\dfrac{A\vdash}{A\wedge\left(1\leftarrow A\right)\vdash}}{\vdash\top\leftarrow\left[A\wedge\left(1\leftarrow A\right)\right]}\qquad\dfrac{\begin{array}{c}
+\\
+\vdash\top
+\end{array}\qquad\dfrac{\dfrac{\dfrac{\vdash A}{1\vdash A}}{1\leftarrow A\vdash}}{A\wedge\left(1\leftarrow A\right)\vdash}}{\vdash\top\leftarrow\left[A\wedge\left(1\leftarrow A\right)\right]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Excluding Top
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{\dfrac{A\vdash0}{\left[A\wedge\left(\top\leftarrow A\right)\right]\vdash0}}{\vdash\left[A\wedge\left(\top\leftarrow A\right)\right]\rightarrow0}\qquad\dfrac{\dfrac{\top\leftarrow A\vdash0}{\left[A\wedge\left(\top\leftarrow A\right)\right]\vdash0}}{\vdash\left[A\wedge\left(\top\leftarrow A\right)\right]\rightarrow0}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{\dfrac{\dfrac{A\vdash}{A\vdash\bot}}{A\wedge\left(\top\leftarrow A\right)\vdash\bot}}{\vdash\left[A\wedge\left(\top\leftarrow A\right)\right]\rightarrow\bot}\qquad\dfrac{\dfrac{\dfrac{\dfrac{\top\vdash A}{\top\leftarrow A\vdash}}{\left[A\wedge\left(\top\leftarrow A\right)\right]\vdash}}{\left[A\wedge\left(\top\leftarrow A\right)\right]\vdash\bot}}{\vdash\left[A\wedge\left(\top\leftarrow A\right)\right]\rightarrow\bot}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{\begin{array}{c}
+\\
+\vdash1
+\end{array}\qquad\dfrac{A\vdash}{A\wedge\left(\top\leftarrow A\right)\vdash}}{\vdash1\leftarrow\left[A\wedge\left(\top\leftarrow A\right)\right]}\qquad\dfrac{\begin{array}{c}
+\\
+\vdash1
+\end{array}\qquad\dfrac{\dfrac{\top\vdash A}{\top\leftarrow A\vdash}}{A\wedge\left(\top\leftarrow A\right)\vdash}}{\vdash1\leftarrow\left[A\wedge\left(\top\leftarrow A\right)\right]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{\begin{array}{c}
+\\
+\vdash\top
+\end{array}\qquad\dfrac{A\vdash}{A\wedge\left(\top\leftarrow A\right)\vdash}}{\vdash\top\leftarrow\left[A\wedge\left(\top\leftarrow A\right)\right]}\qquad\dfrac{\begin{array}{c}
+\\
+\vdash\top
+\end{array}\qquad\dfrac{\dfrac{\top\vdash A}{\top\leftarrow A\vdash}}{A\wedge\left(\top\leftarrow A\right)\vdash}}{\vdash\top\leftarrow\left[A\wedge\left(\top\leftarrow A\right)\right]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Including 0
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{\dfrac{A\vdash0}{\left[A\wedge\left(A\rightarrow0\right)\right]\vdash0}}{\vdash\left[A\wedge\left(A\rightarrow0\right)\right]\rightarrow0}\qquad\dfrac{\dfrac{A\rightarrow0\vdash0}{\left[A\wedge\left(A\rightarrow0\right)\right]\vdash0}}{\vdash\left[A\wedge\left(A\rightarrow0\right)\right]\rightarrow0}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{\dfrac{\dfrac{A\vdash}{A\vdash\bot}}{A\wedge\left(A\rightarrow0\right)\vdash\bot}}{\vdash\left[A\wedge\left(A\rightarrow0\right)\right]\rightarrow\bot}\qquad\dfrac{\dfrac{\dfrac{\dfrac{A\vdash0}{A\rightarrow0\vdash}}{\left[A\wedge\left(A\rightarrow0\right)\right]\vdash}}{\left[A\wedge\left(A\rightarrow0\right)\right]\vdash\bot}}{\vdash\left[A\wedge\left(A\rightarrow0\right)\right]\rightarrow\bot}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{\begin{array}{c}
+\\
+\vdash1
+\end{array}\qquad\dfrac{A\vdash}{A\wedge\left(A\rightarrow0\right)\vdash}}{\vdash1\leftarrow\left[A\wedge\left(A\rightarrow0\right)\right]}\qquad\dfrac{\begin{array}{c}
+\\
+\vdash1
+\end{array}\qquad\dfrac{\dfrac{A\vdash0}{A\rightarrow0\vdash}}{A\wedge\left(A\rightarrow0\right)\vdash}}{\vdash1\leftarrow\left[A\wedge\left(A\rightarrow0\right)\right]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{\begin{array}{c}
+\\
+\vdash\top
+\end{array}\qquad\dfrac{A\vdash}{A\wedge\left(A\rightarrow0\right)\vdash}}{\vdash\top\leftarrow\left[A\wedge\left(A\rightarrow0\right)\right]}\qquad\dfrac{\begin{array}{c}
+\\
+\vdash\top
+\end{array}\qquad\dfrac{\dfrac{A\vdash0}{A\rightarrow0\vdash}}{A\wedge\left(A\rightarrow0\right)\vdash}}{\vdash\top\leftarrow\left[A\wedge\left(A\rightarrow0\right)\right]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Including Bottom
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{\dfrac{A\vdash0}{\left[A\wedge\left(A\rightarrow\bot\right)\right]\vdash0}}{\vdash\left[A\wedge\left(A\rightarrow\bot\right)\right]\rightarrow0}\qquad\dfrac{\dfrac{A\rightarrow\bot\vdash0}{\left[A\wedge\left(A\rightarrow\bot\right)\right]\vdash0}}{\vdash\left[A\wedge\left(A\rightarrow\bot\right)\right]\rightarrow0}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{\dfrac{\dfrac{A\vdash}{A\vdash\bot}}{A\wedge\left(A\rightarrow\bot\right)\vdash\bot}}{\vdash\left[A\wedge\left(A\rightarrow\bot\right)\right]\rightarrow\bot}\qquad\dfrac{\dfrac{L\wedge\dfrac{\dfrac{\dfrac{A\vdash}{A\vdash\bot}}{A\rightarrow\bot\vdash}}{\left[A\wedge\left(A\rightarrow\bot\right)\right]\vdash}}{\left[A\wedge\left(A\rightarrow\bot\right)\right]\vdash\bot}}{\vdash\left[A\wedge\left(A\rightarrow\bot\right)\right]\rightarrow\bot}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{\begin{array}{c}
+\\
+\vdash1
+\end{array}\qquad\dfrac{A\vdash}{A\wedge\left(A\rightarrow\bot\right)\vdash}}{\vdash1\leftarrow\left[A\wedge\left(A\rightarrow\bot\right)\right]}\qquad\dfrac{\begin{array}{c}
+\\
+\vdash1
+\end{array}\qquad\dfrac{\dfrac{\dfrac{A\vdash}{A\vdash\bot}}{A\rightarrow\bot\vdash}}{A\wedge\left(A\rightarrow\bot\right)\vdash}}{\vdash1\leftarrow\left[A\wedge\left(A\rightarrow\bot\right)\right]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{\begin{array}{c}
+\\
+\vdash\top
+\end{array}\qquad\dfrac{A\vdash}{A\wedge\left(A\rightarrow\bot\right)\vdash}}{\vdash\top\leftarrow\left[A\wedge\left(A\rightarrow\bot\right)\right]}\qquad\dfrac{\begin{array}{c}
+\\
+\vdash\top
+\end{array}\qquad\dfrac{\dfrac{\dfrac{A\vdash}{A\vdash\bot}}{A\rightarrow\bot\vdash}}{A\wedge\left(A\rightarrow\bot\right)\vdash}}{\vdash\top\leftarrow\left[A\wedge\left(A\rightarrow\bot\right)\right]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Multiplicative NC'
+\end_layout
+
+\begin_layout Subparagraph*
+All unprovable in B
+\end_layout
+
+\begin_layout Standard
+The reason none of these can be proven in B is because they all contain
+ instances of multiplicative NC sequents which are themselves unprovable.
+\end_layout
+
+\begin_layout Paragraph
+Excluding 1
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash\left[A\otimes\left(1\leftarrow A\right)\right]\rightarrow0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash\left[A\otimes\left(1\leftarrow A\right)\right]\rightarrow\bot
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash1\leftarrow\left[A\otimes\left(1\leftarrow A\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash\top\leftarrow\left[A\otimes\left(1\leftarrow A\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Excluding Top
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash\left[A\otimes\left(\top\leftarrow A\right)\right]\rightarrow0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash\left[A\otimes\left(\top\leftarrow A\right)\right]\rightarrow\bot
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash1\leftarrow\left[A\otimes\left(\top\leftarrow A\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash\top\leftarrow\left[A\otimes\left(\top\leftarrow A\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Including 0
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash\left[A\otimes\left(A\rightarrow0\right)\right]\rightarrow0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash\left[A\otimes\left(A\rightarrow0\right)\right]\rightarrow\bot
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash1\leftarrow\left[A\otimes\left(A\rightarrow0\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash\top\leftarrow\left[A\otimes\left(A\rightarrow0\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Including Bottom
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash\left[A\otimes\left(A\rightarrow\bot\right)\right]\rightarrow0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash\left[A\otimes\left(A\rightarrow\bot\right)\right]\rightarrow\bot
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash1\leftarrow\left[A\otimes\left(A\rightarrow\bot\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdash\top\leftarrow\left[A\otimes\left(A\rightarrow\bot\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Partially provable or provable in B
+\end_layout
+
+\begin_layout Standard
+Only additive NC and NC' rules are partially provable or provable in B.
+\end_layout
+
+\begin_layout Subsubsection
+NC
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+L\wedge\dfrac{A\vdash}{\left[A\wedge\left(A\rightarrow\bot\right)\right]\vdash}\qquad L\wedge\dfrac{\dfrac{\dfrac{A\vdash}{A\vdash\bot}}{A\rightarrow\bot\vdash}}{\left[A\wedge\left(A\rightarrow\bot\right)\right]\vdash}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{A\vdash}{\left[A\wedge\left(1\leftarrow A\right)\right]\vdash}\qquad\dfrac{\dfrac{\dfrac{\vdash A}{1\vdash A}}{1\leftarrow A\vdash}}{\left[A\wedge\left(1\leftarrow A\right)\right]\vdash}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{A\vdash}{\left[A\wedge\left(\top\leftarrow A\right)\right]\vdash}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{A\vdash}{\left[A\wedge\left(A\rightarrow0\right)\right]\vdash}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+NC'
+\end_layout
+
+\begin_layout Paragraph
+Excluding 1
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{\dfrac{\dfrac{A\vdash}{A\vdash\bot}}{A\wedge\left(1\leftarrow A\right)\vdash\bot}}{\vdash\left[A\wedge\left(1\leftarrow A\right)\right]\rightarrow\bot}\qquad\dfrac{\dfrac{\dfrac{\dfrac{\dfrac{\vdash A}{1\vdash A}}{1\leftarrow A\vdash}}{1\leftarrow A\vdash\bot}}{\left[A\wedge\left(1\leftarrow A\right)\right]\vdash\bot}}{\vdash\left[A\wedge\left(1\leftarrow A\right)\right]\rightarrow\bot}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{\begin{array}{c}
+\\
+\vdash1
+\end{array}\qquad\dfrac{A\vdash}{A\wedge\left(1\leftarrow A\right)\vdash}}{\vdash1\leftarrow\left[A\wedge\left(1\leftarrow A\right)\right]}\qquad\dfrac{\begin{array}{c}
+\\
+\vdash1
+\end{array}\qquad\dfrac{\dfrac{\dfrac{\vdash A}{1\vdash A}}{1\leftarrow A\vdash}}{A\wedge\left(1\leftarrow A\right)\vdash}}{\vdash1\leftarrow\left[A\wedge\left(1\leftarrow A\right)\right]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{\begin{array}{c}
+\\
+\vdash\top
+\end{array}\qquad\dfrac{A\vdash}{A\wedge\left(1\leftarrow A\right)\vdash}}{\vdash\top\leftarrow\left[A\wedge\left(1\leftarrow A\right)\right]}\qquad\dfrac{\begin{array}{c}
+\\
+\vdash\top
+\end{array}\qquad\dfrac{\dfrac{\dfrac{\vdash A}{1\vdash A}}{1\leftarrow A\vdash}}{A\wedge\left(1\leftarrow A\right)\vdash}}{\vdash\top\leftarrow\left[A\wedge\left(1\leftarrow A\right)\right]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Excluding Top
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{\dfrac{\dfrac{A\vdash}{A\vdash\bot}}{A\wedge\left(\top\leftarrow A\right)\vdash\bot}}{\vdash\left[A\wedge\left(\top\leftarrow A\right)\right]\rightarrow\bot}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{\begin{array}{c}
+\\
+\vdash1
+\end{array}\qquad\dfrac{A\vdash}{A\wedge\left(\top\leftarrow A\right)\vdash}}{\vdash1\leftarrow\left[A\wedge\left(\top\leftarrow A\right)\right]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{\begin{array}{c}
+\\
+\vdash\top
+\end{array}\qquad\dfrac{A\vdash}{A\wedge\left(\top\leftarrow A\right)\vdash}}{\vdash\top\leftarrow\left[A\wedge\left(\top\leftarrow A\right)\right]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Including 0
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{\dfrac{\dfrac{A\vdash}{A\vdash\bot}}{A\wedge\left(A\rightarrow0\right)\vdash\bot}}{\vdash\left[A\wedge\left(A\rightarrow0\right)\right]\rightarrow\bot}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{\begin{array}{c}
+\\
+\vdash1
+\end{array}\qquad\dfrac{A\vdash}{A\wedge\left(A\rightarrow0\right)\vdash}}{\vdash1\leftarrow\left[A\wedge\left(A\rightarrow0\right)\right]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{\begin{array}{c}
+\\
+\vdash\top
+\end{array}\qquad\dfrac{A\vdash}{A\wedge\left(A\rightarrow0\right)\vdash}}{\vdash\top\leftarrow\left[A\wedge\left(A\rightarrow0\right)\right]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Including Bottom
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{\dfrac{\dfrac{A\vdash}{A\vdash\bot}}{A\wedge\left(A\rightarrow\bot\right)\vdash\bot}}{\vdash\left[A\wedge\left(A\rightarrow\bot\right)\right]\rightarrow\bot}\qquad\dfrac{\dfrac{L\wedge\dfrac{\dfrac{\dfrac{A\vdash}{A\vdash\bot}}{A\rightarrow\bot\vdash}}{\left[A\wedge\left(A\rightarrow\bot\right)\right]\vdash}}{\left[A\wedge\left(A\rightarrow\bot\right)\right]\vdash\bot}}{\vdash\left[A\wedge\left(A\rightarrow\bot\right)\right]\rightarrow\bot}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{\begin{array}{c}
+\\
+\vdash1
+\end{array}\qquad\dfrac{A\vdash}{A\wedge\left(A\rightarrow\bot\right)\vdash}}{\vdash1\leftarrow\left[A\wedge\left(A\rightarrow\bot\right)\right]}\qquad\dfrac{\begin{array}{c}
+\\
+\vdash1
+\end{array}\qquad\dfrac{\dfrac{\dfrac{A\vdash}{A\vdash\bot}}{A\rightarrow\bot\vdash}}{A\wedge\left(A\rightarrow\bot\right)\vdash}}{\vdash1\leftarrow\left[A\wedge\left(A\rightarrow\bot\right)\right]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{\begin{array}{c}
+\\
+\vdash\top
+\end{array}\qquad\dfrac{A\vdash}{A\wedge\left(A\rightarrow\bot\right)\vdash}}{\vdash\top\leftarrow\left[A\wedge\left(A\rightarrow\bot\right)\right]}\qquad\dfrac{\begin{array}{c}
+\\
+\vdash\top
+\end{array}\qquad\dfrac{\dfrac{\dfrac{A\vdash}{A\vdash\bot}}{A\rightarrow\bot\vdash}}{A\wedge\left(A\rightarrow\bot\right)\vdash}}{\vdash\top\leftarrow\left[A\wedge\left(A\rightarrow\bot\right)\right]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Unprovable in B
+\end_layout
+
+\begin_layout Subsubsection
+NC
+\end_layout
+
+\begin_layout Paragraph
+Additive
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{\dfrac{\top\vdash A}{\top\leftarrow A\vdash}}{\left[A\wedge\left(\top\leftarrow A\right)\right]\vdash}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{\dfrac{A\vdash0}{A\rightarrow0\vdash}}{\left[A\wedge\left(A\rightarrow0\right)\right]\vdash}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Multiplicative
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{A,1\leftarrow A\vdash}{\left[A\otimes\left(1\leftarrow A\right)\right]\vdash}\otimes L
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{A,\top\leftarrow A\vdash}{\left[A\otimes\left(\top\leftarrow A\right)\right]\vdash}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{A,A\rightarrow0\vdash}{\left[A\otimes\left(A\rightarrow0\right)\right]\vdash}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{A,A\rightarrow\bot\vdash}{\left[A\otimes\left(A\rightarrow\bot\right)\right]\vdash}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+NC'
+\end_layout
+
+\begin_layout Standard
+All multiplicative NC' rules are unprovable because the multiplicative NC
+ rules are unprovable.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{\dfrac{\dfrac{\dfrac{\top\vdash A}{\top\leftarrow A\vdash}}{\left[A\wedge\left(\top\leftarrow A\right)\right]\vdash}}{\left[A\wedge\left(\top\leftarrow A\right)\right]\vdash\bot}}{\vdash\left[A\wedge\left(\top\leftarrow A\right)\right]\rightarrow\bot}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{\begin{array}{c}
+\\
+\vdash1
+\end{array}\qquad\dfrac{\dfrac{\top\vdash A}{\top\leftarrow A\vdash}}{A\wedge\left(\top\leftarrow A\right)\vdash}}{\vdash1\leftarrow\left[A\wedge\left(\top\leftarrow A\right)\right]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{\begin{array}{c}
+\\
+\vdash\top
+\end{array}\qquad\dfrac{\dfrac{\top\vdash A}{\top\leftarrow A\vdash}}{A\wedge\left(\top\leftarrow A\right)\vdash}}{\vdash\top\leftarrow\left[A\wedge\left(\top\leftarrow A\right)\right]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{\dfrac{\dfrac{\dfrac{A\vdash0}{A\rightarrow0\vdash}}{\left[A\wedge\left(A\rightarrow0\right)\right]\vdash}}{\left[A\wedge\left(A\rightarrow0\right)\right]\vdash\bot}}{\vdash\left[A\wedge\left(A\rightarrow0\right)\right]\rightarrow\bot}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{\begin{array}{c}
+\\
+\vdash1
+\end{array}\qquad\dfrac{\dfrac{A\vdash0}{A\rightarrow0\vdash}}{A\wedge\left(A\rightarrow0\right)\vdash}}{\vdash1\leftarrow\left[A\wedge\left(A\rightarrow0\right)\right]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{\begin{array}{c}
+\\
+\vdash\top
+\end{array}\qquad\dfrac{\dfrac{A\vdash0}{A\rightarrow0\vdash}}{A\wedge\left(A\rightarrow0\right)\vdash}}{\vdash\top\leftarrow\left[A\wedge\left(A\rightarrow0\right)\right]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{\dfrac{A\vdash0}{\left[A\wedge\left(A\rightarrow0\right)\right]\vdash0}}{\vdash\left[A\wedge\left(A\rightarrow0\right)\right]\rightarrow0}\qquad\dfrac{\dfrac{A\rightarrow0\vdash0}{\left[A\wedge\left(A\rightarrow0\right)\right]\vdash0}}{\vdash\left[A\wedge\left(A\rightarrow0\right)\right]\rightarrow0}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{\dfrac{A\vdash0}{\left[A\wedge\left(A\rightarrow\bot\right)\right]\vdash0}}{\vdash\left[A\wedge\left(A\rightarrow\bot\right)\right]\rightarrow0}\qquad\dfrac{\dfrac{A\rightarrow\bot\vdash0}{\left[A\wedge\left(A\rightarrow\bot\right)\right]\vdash0}}{\vdash\left[A\wedge\left(A\rightarrow\bot\right)\right]\rightarrow0}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{\dfrac{A\vdash0}{\left[A\wedge\left(\top\leftarrow A\right)\right]\vdash0}}{\vdash\left[A\wedge\left(\top\leftarrow A\right)\right]\rightarrow0}\qquad\dfrac{\dfrac{\top\leftarrow A\vdash0}{\left[A\wedge\left(\top\leftarrow A\right)\right]\vdash0}}{\vdash\left[A\wedge\left(\top\leftarrow A\right)\right]\rightarrow0}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{\dfrac{A\vdash0}{\left[A\wedge\left(1\leftarrow A\right)\right]\vdash0}}{\vdash\left[A\wedge\left(1\leftarrow A\right)\right]\rightarrow0}\qquad\dfrac{\dfrac{1\leftarrow A\vdash0}{\left[A\wedge\left(1\leftarrow A\right)\right]\vdash0}}{\vdash\left[A\wedge\left(1\leftarrow A\right)\right]\rightarrow0}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
