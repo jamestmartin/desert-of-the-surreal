@@ -297,10 +297,10 @@ em-unprovable₄ em with em (⊥ ⊗ ⊥)
 ... | ⊕R₂ (⇒R (⊗L (⊥R ())))
 ... | ⊕R₂ (⇒R (⊥R (⊗L ())))
 
-em-unprovable₅ : ¬ ∀ A → Term ∅ (∅ ,, A ⊕ (A ⇐ ⊤))
+em-unprovable₅ : ¬ ∀ A → Term ∅ (∅ ,, A ⊕ (⊤ ⇐ A))
 em-unprovable₅ em with em (⊥ ⊗ ⊥)
 ... | ⊕R₁ (⊗R done (⊥R ()) p₁)
-... | ⊕R₂ (⇐R p ())
+... | ⊕R₂ (⇐R p (⊗L ()))
 
 em-unprovable₆ : ¬ ∀ A → Term (∅ ,, (A ⊕ (A ⇒ ⊥)) ⇒ ⊥) (∅ ,, ⊥)
 -- This would be smaller if I chose a better counterexample,
@@ -313,3 +313,18 @@ em-unprovable₆ em with em (⊥ ⊗ ⊥)
 ... | ⇒L (⊕R₁ (⊗R done (⊥R ()) p₂)) p₁
 ... | ⇒L (⊕R₂ (⇒R (⊗L (⊥R ())))) p₁
 ... | ⇒L (⊕R₂ (⇒R (⊥R (⊗L ())))) p₁
+
+em-unprovable₇ : ¬ ∀ A → Term ∅ (∅ ,, A ⊕ (1' ⇐ A))
+em-unprovable₇ em with em (⊥ ⊗ ⊥)
+... | ⊕R₁ (⊗R done (⊥R ()) p₁)
+... | ⊕R₂ (⇐R p (⊗L ()))
+
+em-provable₇ : ¬ ∀ A → Term ∅ (∅ ,, A ⊕ (1' ⇐ A))
+em-provable₇ em with em (⊥ ⊗ ⊥)
+... | ⊕R₁ (⊗R done (⊥R ()) p₁)
+... | ⊕R₂ (⇐R p (⊗L ()))
+
+em-unprovable₈ : ¬ ∀ A → Term ∅ (∅ ,, A ⊕ (A ⇒ 0'))
+em-unprovable₈ em with em (⊥ ⊗ ⊥)
+... | ⊕R₁ (⊗R done (⊥R ()) p₁)
+... | ⊕R₂ (⇒R (⊗L ()))
