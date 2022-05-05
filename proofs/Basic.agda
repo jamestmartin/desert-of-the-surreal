@@ -3,16 +3,12 @@ module Basic where
 
 open import SqEq
 
-import Data.Empty as E
 open import Data.Nat
 open import Data.Nat.Properties
-open import Data.Product
-open import Data.Sum
 open import Relation.Binary.HeterogeneousEquality as HetEq
 open import Relation.Binary.PropositionalEquality as PropEq
-open import Relation.Nullary
 
-private variable n n₁ n₂ n₃ n₄ n₅ n₆ : ℕ
+variable n n₁ n₂ n₃ n₄ n₅ n₆ : ℕ
 
 data Type : Set where
   _⊗_ _⊕_ _&_ _⅋_ _⇒_ _⇐_ : Type → Type → Type
@@ -21,14 +17,14 @@ infix 16 _⇒_ _⇐_
 infix 15 _⊕_ _⅋_
 infix 14 _⊗_ _&_
 
-private variable τ τ₁ τ₂ τ₃ τ₄ : Type
+variable τ τ₁ τ₂ τ₃ τ₄ : Type
 
 data Context : ℕ → Set where
   ∅ : Context 0
   _,,_ : Context n → Type → Context (suc n)
 infixl 10 _,,_ _++_
 
-private variable Γ Γ₁ Γ₂ Δ Δ₁ Δ₂ : Context n
+variable Γ Γ₁ Γ₂ Δ Δ₁ Δ₂ : Context n
 
 -- Coercion function which computes on its constructors.
 ctx-coe : n₁ ≐ n₂ → Context n₁ → Context n₂
@@ -132,199 +128,6 @@ data Term : (Γ : Context n₁) → (Δ : Context n₂) → Set where
 
   -- Exchange and cut are admissible.
 
-Visible : Context n → Set
-Visible {n} Γ = ∃ λ τ → Γ ≅ ∅ ,, τ
-
--- Visibility follows syntactically from the operational rules.
-visibility : Term Γ Δ → Visible Γ ⊎ Visible Δ
-visibility var = inj₁ (_ , refl)
-visibility (⊗L x) = inj₁ (_ , refl)
-visibility (⅋R x) = inj₂ (_ , refl)
-visibility (⅋L x x₁ x₂) = inj₁ (_ , refl)
-visibility (⊗R x x₁ x₂) = inj₂ (_ , refl)
-visibility (1L x) = inj₁ (_ , refl)
-visibility (⊥R x) = inj₂ (_ , refl)
-visibility ⊥L = inj₁ (_ , refl)
-visibility 1R = inj₂ (_ , refl)
-visibility (⊕L x x₁) = inj₁ (_ , refl)
-visibility (&R x x₁) = inj₂ (_ , refl)
-visibility (&L₁ x) = inj₁ (_ , refl)
-visibility (&L₂ x) = inj₁ (_ , refl)
-visibility (⊕R₁ x) = inj₂ (_ , refl)
-visibility (⊕R₂ x) = inj₂ (_ , refl)
-visibility 0L = inj₁ (_ , refl)
-visibility ⊤R = inj₂ (_ , refl)
-visibility (⇐L x) = inj₁ (_ , refl)
-visibility (⇒R x) = inj₂ (_ , refl)
-visibility (⇒L x x₁) = inj₁ (_ , refl)
-visibility (⇐R x x₁) = inj₂ (_ , refl)
-visibility (⇐U x x₁) = inj₁ (_ , refl)
-visibility (⇒U x x₁) = inj₂ (_ , refl)
-
-cut : Term Γ (∅ ,, τ) → Term (∅ ,, τ) Δ → Term Γ Δ
-cutL : Term Γ₁ (∅ ,, τ) → Term (Γ₂ ,, τ) Δ → Term (Γ₁ ++ Γ₂) Δ
-cutR : Term Γ (Δ₁ ,, τ) → Term (∅ ,, τ) Δ₂ → Term Γ (Δ₂ ++ Δ₁)
-
--- I begin on the left hand side. The dual rules on the RHS are presented below.
--- (Aside: it would be easier to read with the rules next to their duals, but I think that
--- makes the function have worse definitional equalities because of exact-splitting.)
-cut var y = y
--- Traverse down the proof tree.
-cut (⊗L x) y = ⊗L (cutL x y)   -- NB: This is the only place `cut` calls `cutL`.
-cut (⅋L (left done) x₁ x₂) y = ⅋L all-lefts (cut x₁ y) x₂
-cut (⅋L (right done) x₁ x₂) y = ⅋L all-rights x₁ (cut x₂ y)
-cut (1L x) y = 1L (cut x y)
-cut (⊕L x x₁) y = ⊕L (cut x y) (cut x₁ y)
-cut (&L₁ x) y = &L₁ (cut x y)
-cut (&L₂ x) y = &L₂ (cut x y)
-cut 0L _ = 0L
-cut (⇒L x x₁) y = ⇒L x (cut x₁ y)
--- Constructors annihilate eliminators.
-cut (⊥R x) ⊥L = x
-cut 1R (1L y) = y
-cut (&R x x₁) (&L₁ y) = cut x y
-cut (&R x x₁) (&L₂ y) = cut x₁ y
-cut (⊕R₁ x) (⊕L y y₁) = cut x y
-cut (⊕R₂ x) (⊕L y y₁) = cut x y₁
--- `⇒U` and `⇐U` seem to be neutral and are annihilated by either constructors *or* eliminators.
-cut (⇒R x) (⇒L y y₁) = cut y (cut x y₁)
-cut (⇒R x) (⇒U y y₁) = ⇒R (cut y (cut x y₁))
-cut (⇐R x x₁) (⇐L y) = cut x (cut y x₁)
-cut (⇐R x x₁) (⇐U y y₁) = ⇐R (cut x y) (cut y₁ x₁)
-cut (⇐U x x₁) (⇐L y) = ⇐L (cut x (cut y x₁))
-cut (⇐U x x₁) (⇐U y y₁) = ⇐U (cut x y) (cut y₁ x₁)
-cut (⇒U x x₁) (⇒L y y₁) = ⇒L (cut y x) (cut x₁ y₁)
-cut (⇒U x x₁) (⇒U y y₁) = ⇒U (cut y x) (cut x₁ y₁)
--- There are *two* (co)terms introduced by `⅋L` which need to be cut into `⅋R`.
--- (Note that `y` is always `⅋L`, but in two of the cases it is not necessary to match against it.)
--- We either cut *both* terms down one side by propogating `y` and its context down that side
--- via introducing a *new* ⅋R, or we cut one sub-term of `y` down one side and the other sub-term down
--- the other side. Either way, the context of each sub-term is propogated downard via `Exch`.
-cut (⅋R (⅋L (left (left done)) x₁ x₂)) y = ⅋L all-lefts (cut (⅋R x₁) y) x₂
--- The left sub-term goes down the right side and the right sub-term goes down the right side,
--- so we need to reverse the order of the contexts.
-cut (⅋R (⅋L (left (right done)) x₁ x₂)) (⅋L x y y₁) = ⅋L (reverse-exch x) (cut x₁ y₁) (cut x₂ y)
-cut (⅋R (⅋L (right (left done)) x₁ x₂)) (⅋L x y y₁) = ⅋L x (cut x₁ y) (cut x₂ y₁)
-cut (⅋R (⅋L (right (right done)) x₁ x₂)) y = ⅋L all-rights x₁ (cut (⅋R x₂) y)
--- Traversing down the proof tree as we did before, only we're cutting in two terms instead of one
--- by introducing a new ⅋R at every step.
-cut (⅋R (⊕L x x₁)) y = ⊕L (cut (⅋R x) y) (cut (⅋R x₁) y)
-cut (⅋R (&L₁ x)) y = &L₁ (cut (⅋R x) y)
-cut (⅋R (&L₂ x)) y = &L₂ (cut (⅋R x) y)
-cut (⅋R 0L) _ = 0L
-cut (⅋R (⇒L x x₁)) y = ⇒L x (cut (⅋R x₁) y)
--- Dual rules.
-cut x var = x
-cut x (⅋R y) = ⅋R (cutR x y)   -- NB: This is the only place `cut` calls `cutR`.
-cut x (⊗R (left done) y₁ y₂) = ⊗R all-lefts (cut x y₁) y₂
-cut x (⊗R (right done) y₁ y₂) = ⊗R all-rights y₁ (cut x y₂)
-cut x (⊥R y) = ⊥R (cut x y)
-cut x (&R y y₁) = &R (cut x y) (cut x y₁)
-cut x (⊕R₁ y) = ⊕R₁ (cut x y)
-cut x (⊕R₂ y) = ⊕R₂ (cut x y)
-cut _ ⊤R = ⊤R
-cut x (⇐R y y₁) = ⇐R (cut x y) y₁
-cut x (⊗L (⊗R (left (left done)) y y₁)) = ⊗R all-lefts (cut x (⊗L y)) y₁
-cut x (⊗L (⊗R (right (right done)) y y₁)) = ⊗R all-rights y (cut x (⊗L y₁))
-cut x (⊗L (&R y y₁)) = &R (cut x (⊗L y)) (cut x (⊗L y₁))
-cut x (⊗L (⊕R₁ y)) = ⊕R₁ (cut x (⊗L y))
-cut x (⊗L (⊕R₂ y)) = ⊕R₂ (cut x (⊗L y))
-cut _ (⊗L ⊤R) = ⊤R
-cut x (⊗L (⇐R y y₁)) = ⇐R (cut x (⊗L y)) y₁
--- Looks like the dual rules for ⊗R compared to ⅋R are simpler for whatever reason? I'm not sure why.
-cut (⊗R x x₁ x₂) (⊗L (⊗R (left (right done)) y y₁)) = ⊗R (reverse-exch x) (cut x₂ y) (cut x₁ y₁)
-cut (⊗R x x₁ x₂) (⊗L (⊗R (right (left done)) y y₁)) = ⊗R x (cut x₁ y) (cut x₂ y₁)
-
-cutL {Γ₂ = ∅} x y = cut x y
-cutL {Γ₂ = _ ,, _} x (⊗R (left p) y y₁) = ⊗R (exch-coe₁ (over p all-lefts)) (cutL x y) y₁
-cutL {Γ₂ = _ ,, _} x (⊗R (right p) y y₁) = ⊗R (exch-coe₂ (over p all-rights)) y (cutL x y₁)
-cutL {Γ₂ = _ ,, _} x (&R y y₁) = &R (cutL x y) (cutL x y₁)
-cutL {Γ₂ = _ ,, _} x (⊕R₁ y) = ⊕R₁ (cutL x y)
-cutL {Γ₂ = _ ,, _} x (⊕R₂ y) = ⊕R₂ (cutL x y)
-cutL {Γ₂ = _ ,, _} _ ⊤R = ⊤R
-cutL {Γ₂ = _ ,, _} x (⇐R y y₁) = ⇐R (cutL x y) y₁
-
-cutR {Δ₁ = ∅} x y = cut x y
-cutR {Δ₁ = _ ,, _} (⅋L (left p) x x₁) y = ⅋L (exch-coe₁ (over p all-lefts)) (cutR x y) x₁
-cutR {Δ₁ = _ ,, _} (⅋L (right p) x x₁) y = ⅋L (exch-coe₂ (over p all-rights)) x (cutR x₁ y)
-cutR {Δ₁ = _ ,, _} (⊕L x x₁) y = ⊕L (cutR x y) (cutR x₁ y)
-cutR {Δ₁ = _ ,, _} (&L₁ x) y = &L₁ (cutR x y)
-cutR {Δ₁ = _ ,, _} (&L₂ x) y = &L₂ (cutR x y)
-cutR {Δ₁ = _ ,, _} 0L _ = 0L
-cutR {Δ₁ = _ ,, _} (⇒L x x₂) y = ⇒L x (cutR x₂ y)
-
--- TODO: Prove that exchange is admissible.
---`exch : Permute Γ Γ' → Permute Δ Δ' → Term Γ Δ → Term Γ' Δ'`
-
--- 1L is an equivalence. (TODO: prove this is an actual inverse)
-anti-1L : Term (∅ ,, 1') Δ → Term ∅ Δ
-anti-1L var = 1R
-anti-1L (⅋R x) = ⅋R (anti-1L x)
-anti-1L (⊗R (left done) x₁ x₂) = ⊗R done (anti-1L x₁) x₂
-anti-1L (⊗R (right done) x₁ x₂) = ⊗R done x₁ (anti-1L x₂)
-anti-1L (1L x) = x
-anti-1L (⊥R (1L ()))
-anti-1L (&R x x₁) = &R (anti-1L x) (anti-1L x₁)
-anti-1L (⊕R₁ x) = ⊕R₁ (anti-1L x)
-anti-1L (⊕R₂ x) = ⊕R₂ (anti-1L x)
-anti-1L ⊤R = ⊤R
-anti-1L (⇐R x x₁) = ⇐R (anti-1L x) x₁
-
--- NO multiplicative EM is provable, nor indeed any such ⅋ at all.
-ems-unprovable : ∀ {A B} → ¬ Term ∅ (∅ ,, A ⅋ B)
-ems-unprovable (⅋R ())
-
--- It makes no difference if you follow from ∅ or 1 (see `anti-1L`).
-ems-unprovable₂ : ∀ {A B} → ¬ Term (∅ ,, 1') (∅ ,, A ⅋ B)
-ems-unprovable₂ (⅋R (1L ()))
-ems-unprovable₂ (1L (⅋R ()))
-
--- TODO: proof similar to `anti-1L` for `⊤`
-ems-unprovable₃ : ∀ {A B} → ¬ Term (∅ ,, ⊤) (∅ ,, A ⅋ B)
-ems-unprovable₃ (⅋R ())
-
--- The rest of the EM′s appear to follow obviously.
-ems-unprovable₄ : ∀ {A B} → ¬ Term (∅ ,, (A ⅋ B) ⇒ ⊥) ∅
-ems-unprovable₄ (⇒L p p₁) = ems-unprovable p
-
--- Whereas *no* instance of multiplicative EM is valid,
--- there are valid instances of additive EM (for anything that's provable),
--- but additive EMs have counterexamples in things which *aren't* provable.
--- I uniformly use `⊥ ⊗ ⊥` as a counterexample because it has no proofs nor refutations.
-em-unprovable₄ : ¬ ∀ A → Term ∅ (∅ ,, A ⊕ (A ⇒ ⊥))
-em-unprovable₄ em with em (⊥ ⊗ ⊥)
-... | ⊕R₁ (⊗R done (⊥R ()) p₁)
-... | ⊕R₂ (⇒R (⊗L (⊥R ())))
-... | ⊕R₂ (⇒R (⊥R (⊗L ())))
-
-em-unprovable₅ : ¬ ∀ A → Term ∅ (∅ ,, A ⊕ (⊤ ⇐ A))
-em-unprovable₅ em with em (⊥ ⊗ ⊥)
-... | ⊕R₁ (⊗R done (⊥R ()) p₁)
-... | ⊕R₂ (⇐R p (⊗L ()))
-
-em-unprovable₆ : ¬ ∀ A → Term (∅ ,, (A ⊕ (A ⇒ ⊥)) ⇒ ⊥) (∅ ,, ⊥)
--- This would be smaller if I chose a better counterexample,
--- but we don't care about specific choice of counterexample
--- and just mindlessly smashing out the refutation is easier than coming up with one.
-em-unprovable₆ em with em (⊥ ⊗ ⊥)
-... | ⊥R (⇒L (⊕R₁ (⊗R done (⊥R ()) p₁)) ⊥L)
-... | ⊥R (⇒L (⊕R₂ (⇒R (⊗L (⊥R ())))) ⊥L)
-... | ⊥R (⇒L (⊕R₂ (⇒R (⊥R (⊗L ())))) ⊥L)
-... | ⇒L (⊕R₁ (⊗R done (⊥R ()) p₂)) p₁
-... | ⇒L (⊕R₂ (⇒R (⊗L (⊥R ())))) p₁
-... | ⇒L (⊕R₂ (⇒R (⊥R (⊗L ())))) p₁
-
-em-unprovable₇ : ¬ ∀ A → Term ∅ (∅ ,, A ⊕ (1' ⇐ A))
-em-unprovable₇ em with em (⊥ ⊗ ⊥)
-... | ⊕R₁ (⊗R done (⊥R ()) p₁)
-... | ⊕R₂ (⇐R p (⊗L ()))
-
-em-provable₇ : ¬ ∀ A → Term ∅ (∅ ,, A ⊕ (1' ⇐ A))
-em-provable₇ em with em (⊥ ⊗ ⊥)
-... | ⊕R₁ (⊗R done (⊥R ()) p₁)
-... | ⊕R₂ (⇐R p (⊗L ()))
-
-em-unprovable₈ : ¬ ∀ A → Term ∅ (∅ ,, A ⊕ (A ⇒ 0'))
-em-unprovable₈ em with em (⊥ ⊗ ⊥)
-... | ⊕R₁ (⊗R done (⊥R ()) p₁)
-... | ⊕R₂ (⇒R (⊗L ()))
+_⊢_ : (Γ : Context n₁) → (Δ : Context n₂) → Set
+_⊢_ = Term
+infix 5 _⊢_
