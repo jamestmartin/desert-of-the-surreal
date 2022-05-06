@@ -21,7 +21,6 @@ Visible {n} Γ = ∃ λ τ → Γ ≅ ∅ ,, τ
 
 -- Visibility follows syntactically from the operational rules.
 visibility : Term Γ Δ → Visible Γ ⊎ Visible Δ
-visibility var = inj₁ (_ , refl)
 visibility (⊗L x) = inj₁ (_ , refl)
 visibility (⅋R x) = inj₂ (_ , refl)
 visibility (⅋L x x₁ x₂) = inj₁ (_ , refl)
@@ -67,7 +66,6 @@ symmetricExch (left exch) = left (symmetricExch exch)
 symmetricExch (right exch) = right (symmetricExch exch)
 
 symmetry : Term Γ Δ → Term (dualCtx Δ) (dualCtx Γ)
-symmetry var = var
 symmetry (⊗L x) = ⅋R (symmetry x)
 symmetry (⅋R x) = ⊗L (symmetry x)
 symmetry (⅋L x x₁ x₂) = ⊗R (symmetricExch x) (symmetry x₁) (symmetry x₂)
@@ -92,9 +90,11 @@ symmetry (⇐U x x₁) = ⇒U (symmetry x₁) (symmetry x)
 symmetry (⇒U x x₁) = ⇐U (symmetry x₁) (symmetry x)
 
 reflect⊗₁ : ∀ {A B} → (∅ ,, A ⊗ B ⊢ Δ) → (∅ ,, A ,, B ⊢ Δ)
-reflect⊗₁ var = ⊗R (right (left done)) var var
+reflect⊗₁ x = cutL (⊗R (right (left done)) identity identity) x
+
+{-
 reflect⊗₁ (⊗L x) = x
-reflect⊗₁ (⅋R x) = ⅋R (reflect⊗₁ x)
+reflect⊗₁ (⅋R (⊗L ()))
 reflect⊗₁ (⊗R (left done) x₁ x₂) = ⊗R (left (left done)) (reflect⊗₁ x₁) x₂
 reflect⊗₁ (⊗R (right done) x₁ x₂) = ⊗R (right (right done)) x₁ (reflect⊗₁ x₂)
 reflect⊗₁ (⊥R (⊗L ()))
@@ -103,11 +103,12 @@ reflect⊗₁ (⊕R₁ x) = ⊕R₁ (reflect⊗₁ x)
 reflect⊗₁ (⊕R₂ x) = ⊕R₂ (reflect⊗₁ x)
 reflect⊗₁ ⊤R = ⊤R
 reflect⊗₁ (⇐R x x₁) = ⇐R (reflect⊗₁ x) x₁
+-}
 
 reflect⊗₂ : ∀ {A B} → (∅ ,, A ,, B ⊢ Δ) → (∅ ,, A ⊗ B ⊢ Δ)
--- This also works, but the larger version makes it closer to an equivalence.
---reflect⊗₂ x = ⊗L x
-reflect⊗₂ (⊗R (right (left done)) var var) = var
+reflect⊗₂ x = ⊗L x
+-- Partially composed with cut to always produce canonical form.
+{-
 reflect⊗₂ x@(⊗R (left (right done)) x₁ x₂) = ⊗L x
 reflect⊗₂ x@(⊗R (right (left done)) x₁ x₂) = ⊗L x
 reflect⊗₂ (⊗R (left (left done)) x₁ x₂) = ⊗R (left done) (reflect⊗₂ x₁) x₂
@@ -117,6 +118,7 @@ reflect⊗₂ (⊕R₁ x) = ⊕R₁ (reflect⊗₂ x)
 reflect⊗₂ (⊕R₂ x) = ⊕R₂ (reflect⊗₂ x)
 reflect⊗₂ ⊤R = ⊤R
 reflect⊗₂ (⇐R x x₁) = ⇐R (reflect⊗₂ x) x₁
+-}
 
 -- Counterexample to the inequivalence of 
 reflect⊗-inj-cx₁ : ∀ {A B} → (x : ∅ ,, A ,, B ⊢ ∅ ,, ⊤) → x ≡ ⊤R
@@ -136,7 +138,6 @@ reflect⊗-inequiv eqvs with eqvs {Δ = ∅ ,, ⊤}
 -}
 
 reflect1₁ : ∅ ,, 1' ⊢ Δ → ∅ ⊢ Δ
-reflect1₁ var = 1R
 reflect1₁ (⅋R (1L ()))
 reflect1₁ (⊗R (left done) x₁ x₂) = ⊗R done (reflect1₁ x₁) x₂
 reflect1₁ (⊗R (right done) x₁ x₂) = ⊗R done x₁ (reflect1₁ x₂)
@@ -152,17 +153,16 @@ reflect1₂ : ∅ ⊢ Δ → ∅ ,, 1' ⊢ Δ
 reflect1₂ = 1L
 
 reflect&₁ : ∀ {A B} → (Γ ⊢ ∅ ,, A & B) → (Γ ⊢ ∅ ,, A × Γ ⊢ ∅ ,, B)
-reflect&₁ var = (&L₁ var) , (&L₂ var)
 reflect&₁ (⊗L (&R x x₁)) = ⊗L x , ⊗L x₁
-reflect&₁ (⅋L (left done) x₁ x₂) = (⅋L (left done) (cut x₁ (&L₁ var)) x₂) , ⅋L (left done) (cut x₁ (&L₂ var)) x₂
-reflect&₁ (⅋L (right done) x₁ x₂) = (⅋L (right done) x₁ (cut x₂ (&L₁ var))) , ⅋L (right done) x₁ (cut x₂ (&L₂ var))
+reflect&₁ (⅋L (left done) x₁ x₂) = (⅋L (left done) (cut x₁ (&L₁ identity)) x₂) , ⅋L (left done) (cut x₁ (&L₂ identity)) x₂
+reflect&₁ (⅋L (right done) x₁ x₂) = (⅋L (right done) x₁ (cut x₂ (&L₁ identity))) , ⅋L (right done) x₁ (cut x₂ (&L₂ identity))
 reflect&₁ (1L (&R x x₁)) = 1L x , 1L x₁
-reflect&₁ (⊕L x x₁) = ⊕L (cut x (&L₁ var)) (cut x₁ (&L₁ var)) , ⊕L (cut x (&L₂ var)) (cut x₁ (&L₂ var))
+reflect&₁ (⊕L x x₁) = ⊕L (cut x (&L₁ identity)) (cut x₁ (&L₁ identity)) , ⊕L (cut x (&L₂ identity)) (cut x₁ (&L₂ identity))
 reflect&₁ (&R x x₁) = x , x₁
-reflect&₁ (&L₁ x) = cut (&L₁ var) (proj₁ (reflect&₁ x)) , cut (&L₁ var) (proj₂ (reflect&₁ x))
-reflect&₁ (&L₂ x) = cut (&L₂ var) (proj₁ (reflect&₁ x)) , cut(&L₂ var) (proj₂ (reflect&₁ x))
+reflect&₁ (&L₁ x) = cut (&L₁ identity) (proj₁ (reflect&₁ x)) , cut (&L₁ identity) (proj₂ (reflect&₁ x))
+reflect&₁ (&L₂ x) = cut (&L₂ identity) (proj₁ (reflect&₁ x)) , cut (&L₂ identity) (proj₂ (reflect&₁ x))
 reflect&₁ 0L = 0L , 0L
-reflect&₁ (⇒L x x₁) = (⇒L x (cut x₁ (&L₁ var))) , (⇒L x (cut x₁ (&L₂ var)))
+reflect&₁ (⇒L x x₁) = (⇒L x (cut x₁ (&L₁ identity))) , (⇒L x (cut x₁ (&L₂ identity)))
 
 reflect&₂ : ∀ {A B} → (Γ ⊢ ∅ ,, A × Γ ⊢ ∅ ,, B) → (Γ ⊢ ∅ ,, A & B)
 reflect&₂ (x , y) = &R x y

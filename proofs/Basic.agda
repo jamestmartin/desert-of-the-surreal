@@ -95,9 +95,6 @@ over (left p) q = left (over p q)
 over (right p) q = right (over p q)
 
 data Term : (Γ : Context n₁) → (Δ : Context n₂) → Set where
-  -- Identity axiom.
-  var : Term (∅ ,, τ) (∅ ,, τ)
-
   -- Operational rules for multiplicatives.
   ⊗L : Term (∅ ,, τ₁ ,, τ₂) Δ → Term (∅ ,, τ₁ ⊗ τ₂) Δ
   ⅋R : Term Γ (∅ ,, τ₁ ,, τ₂) → Term Γ (∅ ,, τ₁ ⅋ τ₂)

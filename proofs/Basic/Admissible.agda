@@ -6,15 +6,24 @@ module Basic.Admissible where
 open import Basic
 open import SqEq
 
--- TODO: Prove that exchange is admissible.
---`exch : Permute Γ Γ' → Permute Δ Δ' → Term Γ Δ → Term Γ' Δ'`
-
+identity : Term (∅ ,, τ) (∅ ,, τ)
 cut : Term Γ (∅ ,, τ) → Term (∅ ,, τ) Δ → Term Γ Δ
 cutL : Term Γ₁ (∅ ,, τ) → Term (Γ₂ ,, τ) Δ → Term (Γ₁ ++ Γ₂) Δ
 cutR : Term Γ (Δ₁ ,, τ) → Term (∅ ,, τ) Δ₂ → Term Γ (Δ₂ ++ Δ₁)
+-- TODO: Prove that exchange is admissible.
+--`exch : Permute Γ Γ' → Permute Δ Δ' → Term Γ Δ → Term Γ' Δ'`
 
-cut var y = y
-cut x var = x
+identity {τ ⊗ τ₁} = ⊗L (⊗R (right (left done)) identity identity)
+identity {τ ⊕ τ₁} = ⊕L (⊕R₁ identity) (⊕R₂ identity)
+identity {τ & τ₁} = &R (&L₁ identity) (&L₂ identity)
+identity {τ ⅋ τ₁} = ⅋R (⅋L (right (left done)) identity identity)
+identity {τ ⇒ τ₁} = ⇒U identity identity
+identity {τ ⇐ τ₁} = ⇐U identity identity
+identity {⊤} = ⊤R
+identity {⊥} = ⊥R ⊥L
+identity {0'} = 0L
+identity {1'} = 1L 1R
+
 -- Traverse down the proof tree.
 cut (⊗L x) y = ⊗L (cutL x y)   -- NB: This is the only place `cut` calls `cutL`.
 cut x (⅋R y) = ⅋R (cutR x y)   -- NB: This is the only place `cut` calls `cutR`.
