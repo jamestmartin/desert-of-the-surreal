@@ -51,6 +51,7 @@ Paracomplete_and_Paraconsistent_Co_and_Dual_and_codual_MetaSystem_Type_Theory_Pr
 #### Misc
 * https://www.pauldownen.com/publications/downen_phd.pdf (the substructural system L which appears to be a combination of Sambin's Basic Logic as a Type Theory and its dual/co?)
 * https://prooftheory.blog/2021/09/23/confluence-in-the-sequent-calculus/ (Cut elimination, non-confluence of proof, proof irrelevance)
+* https://sites.pitt.edu/~belnap/87displaylogic.pdf (Display Logic, Structural Proof Theory, semantically exposed sequent calculi)
 
 ### Semantic Specifications
 #### Truth and Satisfiability Semantics
