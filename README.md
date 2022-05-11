@@ -122,6 +122,7 @@ https://proofassistants.stackexchange.com/a/713"
 
 
 ## Secondary References:
+* http://alessio.guglielmi.name/res/cos/ (Deep inference, intuitionistic logic, bi-intuitionism, linear and local logics, structural proof theory, and a LOT more)
 * https://core.ac.uk/download/pdf/162572056.pdf (Fuzzy multisets)
 * https://www.researchgate.net/publication/221320313_Fuzzy_Multisets_and_Their_Generalizations
 * https://www.researchgate.net/publication/230657496_On_Generalized_Fuzzy_Multisets_and_their_Use_in_Computation
