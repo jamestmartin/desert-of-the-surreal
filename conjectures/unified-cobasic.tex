@@ -1,0 +1,364 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{ebproof}
+\usepackage{fullpage}
+\usepackage[utf8]{inputenc}
+\usepackage{newunicodechar}
+\usepackage{stix}
+
+\newunicodechar{Γ}{\Gamma}
+\newunicodechar{Δ}{\Delta}
+\newunicodechar{Λ}{\Lambda}
+\newunicodechar{Θ}{\Theta}
+
+\newunicodechar{⊢}{\vdash}
+\newunicodechar{⊣}{\dashv}
+
+\newunicodechar{⅋}{\upand}
+\newunicodechar{⊥}{\bot}
+\newunicodechar{⊗}{\otimes}
+\newunicodechar{⊕}{\oplus}
+\newunicodechar{⊤}{\top}
+\newunicodechar{→}{\rightarrow}
+\newunicodechar{←}{\leftarrow}
+
+\newunicodechar{∧}{\land}
+\newunicodechar{∨}{\lor}
+\newunicodechar{∪}{\cup}
+
+\setlength{\parindent}{0em}
+
+\author{James Martin}
+\title{Unified (Co)Basic Rules}
+
+\begin{document}
+\maketitle
+\section{Interpretation}
+Entailments:
+\begin{itemize}
+\item $Γ ⊢ Δ$: If every $Γ$ is inhabited, then some $Δ$ is inhabited; if every $Δ$ is contradictory, then some $Γ$ is contradictory.
+\item $Δ ⊣ Γ$: If any $Δ$ is impossible, then every $Γ$ is impossible; conversely, if any $Γ$ is plausible, then every $Δ$ is plausible.
+\end{itemize}
+
+Proofs:
+\begin{itemize}
+\item A type is inhabited if it can be constructed (relative to a context, but usually in the empty context, one). This is generally the meaning of ``true''.
+\item A type is contradictory if it can be eliminated (usually to the empty context, bottom). This does not necessarily make it false.
+\item A type is impossible if every possible inhabitant implies triviality. This is generally the meaning of ``false''.
+\item A type is plausible if it could be true in some model. This does not necessarily make it true.
+\end{itemize}
+
+\newpage
+\section{Operational Rules}
+\begin{center}
+
+\[
+\begin{prooftree}
+  \hypo{Δ ⊣ A}
+  \infer1{Δ ⊣ A ⊗ B}
+\end{prooftree}
+\quad
+\begin{prooftree}
+  \hypo{Δ ⊣ B}
+  \infer1{Δ ⊣ A ⊗ B}
+\end{prooftree}
+\quad
+\begin{prooftree}
+  \hypo{A ⊣ Γ}
+  \hypo{B ⊣ Γ}
+  \infer2{A ⊗ B ⊣ Γ}
+\end{prooftree}
+\quad
+\begin{prooftree}
+  \hypo{A, B ⊢ Δ}
+  \infer1{A ⊗ B ⊢ Δ}
+\end{prooftree}
+\quad
+\begin{prooftree}
+  \hypo{Γ ⊢ A}
+  \hypo{Λ ⊢ B}
+  \infer2{Γ, Λ ⊢ A ⊗ B}
+\end{prooftree}
+\quad
+\begin{prooftree}
+  \infer0{1 ⊣ Γ}
+\end{prooftree}
+\quad
+\begin{prooftree}
+  \infer0{⊢ 1}
+\end{prooftree}
+\quad
+\begin{prooftree}
+  \hypo{⊢ Δ}
+  \infer1{1 ⊢ Δ}
+\end{prooftree}
+\]
+
+\[
+\begin{prooftree}
+  \hypo{A ⊣ Γ}
+  \infer1{A ⅋ B ⊣ Γ}
+\end{prooftree}
+\quad
+\begin{prooftree}
+  \hypo{B ⊣ Γ}
+  \infer1{A ⅋ B ⊣ Γ}
+\end{prooftree}
+\quad
+\begin{prooftree}
+  \hypo{Δ ⊣ A}
+  \hypo{Δ ⊣ B}
+  \infer2{Δ ⊣ A ⅋ B}
+\end{prooftree}
+\quad
+\begin{prooftree}
+  \hypo{Γ ⊢ A, B}
+  \infer1{Γ ⊢ A ⅋ B}
+\end{prooftree}
+\quad
+\begin{prooftree}
+  \hypo{A ⊢ Δ}
+  \hypo{B ⊢ Θ}
+  \infer2{A ⅋ B ⊢ Δ, Θ}
+\end{prooftree}
+\quad
+\begin{prooftree}
+  \infer0{Δ ⊣ ⊥}
+\end{prooftree}
+\quad
+\begin{prooftree}
+  \infer0{⊥ ⊢}
+\end{prooftree}
+\quad
+\begin{prooftree}
+  \hypo{Γ ⊢}
+  \infer1{Γ ⊢ ⊥}
+\end{prooftree}
+\]
+
+\[
+\begin{prooftree}
+  \hypo{Γ ⊢ A}
+  \infer1{Γ ⊢ A ⊕ B}
+\end{prooftree}
+\quad
+\begin{prooftree}
+  \hypo{Γ ⊢ B}
+  \infer1{Γ ⊢ A ⊕ B}
+\end{prooftree}
+\quad
+\begin{prooftree}
+  \hypo{A ⊢ Δ}
+  \hypo{B ⊢ Δ}
+  \infer2{A ⊕ B ⊢ Δ}
+\end{prooftree}
+\quad
+\begin{prooftree}
+  \hypo{Δ ⊣ A, B}
+  \infer1{Δ ⊣ A ⊕ B}
+\end{prooftree}
+\quad
+\begin{prooftree}
+  \hypo{A ⊣ Γ}
+  \hypo{B ⊣ Λ}
+  \infer2{A ⊕ B ⊣ Γ, Λ}
+\end{prooftree}
+\quad
+\begin{prooftree}
+  \infer0{0 ⊢ Δ}
+\end{prooftree}
+\quad
+\begin{prooftree}
+  \infer0{0 ⊣}
+\end{prooftree}
+\quad
+\begin{prooftree}
+  \hypo{Δ ⊣}
+  \infer1{Δ ⊣ 0}
+\end{prooftree}
+\]
+
+\[
+\begin{prooftree}
+  \hypo{A ⊢ Δ}
+  \infer1{A \& B ⊢ Δ}
+\end{prooftree}
+\quad
+\begin{prooftree}
+  \hypo{B ⊢ Δ}
+  \infer1{A \& B ⊢ Δ}
+\end{prooftree}
+\quad
+\begin{prooftree}
+  \hypo{Γ ⊢ A}
+  \hypo{Γ ⊢ B}
+  \infer2{Γ ⊢ A \& B}
+\end{prooftree}
+\quad
+\begin{prooftree}
+  \hypo{A, B ⊣ Γ}
+  \infer1{A \& B ⊣ Γ}
+\end{prooftree}
+\quad
+\begin{prooftree}
+  \hypo{Δ ⊣ A}
+  \hypo{Θ ⊣ B}
+  \infer2{Δ, Θ ⊣ A \& B}
+\end{prooftree}
+\quad
+\begin{prooftree}
+  \infer0{Γ ⊢ ⊤}
+\end{prooftree}
+\quad
+\begin{prooftree}
+  \infer0{⊣ ⊤}
+\end{prooftree}
+\quad
+\begin{prooftree}
+  \hypo{⊣ Γ}
+  \infer1{⊤ ⊣ Γ}
+\end{prooftree}
+\]
+
+\[
+\begin{prooftree}
+  \hypo{A ⊢ B}
+  \infer1{⊢ A → B}
+\end{prooftree}
+\quad
+\begin{prooftree}
+  \hypo{B ⊣ A}
+  \infer1{A → B ⊣}
+\end{prooftree}
+\quad
+\begin{prooftree}
+  \hypo{⊣ A}
+  \infer1{⊢ A → B}
+\end{prooftree}
+\quad
+\begin{prooftree}
+  \hypo{⊢ B}
+  \infer1{A → B ⊣}
+\end{prooftree}
+\quad
+\begin{prooftree}
+  \hypo{⊢ A}
+  \hypo{B ⊢ Δ}
+  \infer2{A → B ⊢ Δ}
+\end{prooftree}
+\quad
+\begin{prooftree}
+  \hypo{⊢ A}
+  \hypo{Δ ⊣ B}
+  \infer2{Δ ⊣ A → B}
+\end{prooftree}
+\quad
+\begin{prooftree}
+  \hypo{A ⊢ B}
+  \hypo{C ⊢ D}
+  \infer2{B → C ⊢ A → D}
+\end{prooftree}
+\]
+
+\[
+\begin{prooftree}
+  \hypo{B ⊢ A}
+  \infer1{B ← A ⊢}
+\end{prooftree}
+\quad
+\begin{prooftree}
+  \hypo{A ⊣ B}
+  \infer1{B ← A ⊣}
+\end{prooftree}
+\quad
+\begin{prooftree}
+  \hypo{Δ ⊣ A}
+  \infer1{Δ ⊣ A ← B}
+\end{prooftree}
+\quad
+\begin{prooftree}
+  \hypo{⊢ B}
+  \infer1{⊣ A ← B}
+\end{prooftree}
+\quad
+\begin{prooftree}
+  \hypo{Γ ⊢ A}
+  \hypo{B ⊢}
+  \infer2{Γ ⊢ A ← B}
+\end{prooftree}
+\quad
+\begin{prooftree}
+  \hypo{⊣ B}
+  \hypo{A ⊣ Δ}
+  \infer2{A ← B ⊣ Δ}
+\end{prooftree}
+\quad
+\begin{prooftree}
+  \hypo{A ⊢ B}
+  \hypo{C ⊢ D}
+  \infer2{D ← A ⊢ C ← B}
+\end{prooftree}
+\]
+\end{center}
+
+\section{Structural Rules}
+Some rules are missing until I can think about them more.
+
+\begin{center}
+\[
+\begin{prooftree}
+  \infer0[Id]{A ⊢ A}
+\end{prooftree}
+\]
+
+\[
+\begin{prooftree}
+  \hypo{Γ ⊢ A}
+  \hypo{A ⊢ Δ}
+  \infer2[cut]{Γ ⊢ Δ}
+\end{prooftree}
+\quad
+\begin{prooftree}
+  \hypo{Γ ⊢ A}
+  \hypo{A, Λ ⊢ Δ}
+  \infer2[cutL]{Γ, Λ ⊢ Δ}
+\end{prooftree}
+\quad
+\begin{prooftree}
+  \hypo{Γ ⊢ Δ, A}
+  \hypo{A ⊢ Θ}
+  \infer2[cutR]{Γ ⊢ Δ, Θ}
+\end{prooftree}
+\quad
+\begin{prooftree}
+  \hypo{Γ ⊣ A}
+  \hypo{A ⊣ Δ}
+  \infer2[tuc]{Γ ⊣ Δ}
+\end{prooftree}
+\]
+
+\[
+\begin{prooftree}
+  \hypo{Γ, A, B, Λ ⊢ Δ}
+  \infer1[exchL]{Γ, B, A, Λ ⊢ Δ}
+\end{prooftree}
+\quad
+\begin{prooftree}
+  \hypo{Γ ⊢ Δ, A, B, Θ}
+  \infer1[exchR]{Γ ⊢ Δ, B, A, Θ}
+\end{prooftree}
+\quad
+\begin{prooftree}
+  \hypo{Δ, A, B, Θ ⊣ Γ}
+  \infer1[Lhcxe]{Δ, B, A, Θ ⊣ Γ}
+\end{prooftree}
+\quad
+\begin{prooftree}
+  \hypo{Δ ⊣ Γ, A, B, Λ}
+  \infer1[Rhcxe]{Δ ⊣ Γ, B, A, Λ}
+\end{prooftree}
+\]
+\end{center}
+
+\end{document}

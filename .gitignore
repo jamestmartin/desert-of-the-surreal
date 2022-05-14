@@ -6,3 +6,7 @@
 
 # Agda code
 _build/
+
+# LaTeX logs
+*.log
+*.aux
