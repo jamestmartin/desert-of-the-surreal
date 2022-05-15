@@ -26,12 +26,15 @@ Paracomplete_and_Paraconsistent_Co_and_Dual_and_codual_MetaSystem_Type_Theory_Pr
 ### Specific System Definitions in Sambin's Cube
 #### LK
 * https://www.lix.polytechnique.fr/~lutz/papers/medial-kurz.pdf (LK, Category of LK, Systemic collapses to Boolean Algebra)
-#### LJ
+#### Bi-intuitionism
+##### Proof systems and refutation cosystem 
+* http://users.cecs.anu.edu.au/~linda/thesis.pdf (Simultaneous systems of paracomplete proof and paraconsistent refutation)
+* https://research.uca.ac.uk/2985/1/SCCL(Final).pdf (Simultaneous systems of paracomplete proof and paraconsistent refutation, The system LJ and coLJ)
+##### LJ
 * TBD
-#### LDJ
+##### LDJ
 * https://projecteuclid.org/journalArticle/Download?urlId=10.1305%2Fndjfl%2F1039886520 (The system LDJ)
 * https://link.springer.com/article/10.1007/s11225-005-8474-7 (LDJ and its relations to Nelson's logics)
-* https://research.uca.ac.uk/2985/1/SCCL(Final).pdf (The system coLJ)
 #### BvN
 * TBD
 #### CLL
