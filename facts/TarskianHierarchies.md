@@ -1,6 +1,6 @@
 # Tarskian Hierarchies of Languages
 The hierarchies of languages correspond to a rejection of one or more of the four conditions outlined in Tarski's investigations of the definability of truth:
-* The languages are consistent
+* The languages or their metalanguage are consistent
 * The languages are semantically closed.
 * The ordinary (classical) rules of logic hold for the languages.
 * The languages have some mechanism allowing self-reference.
@@ -52,5 +52,6 @@ Two other forms of hierarchy are possible but less well defined in the literatur
 * The hierarchy of non-consistent languages which necessarily concerns those object languages and metalanguages that have either inconsistent or paraconsistent semantics or syntax.
 * The hierarchy of non-classical or non-deductive languages.
   * Kripke's Theory of Intuitionistic Truth and Transfinite Hierarchy of Deductive Intuitionistic Languages. https://www.impan.pl/~kz/truthseminar/Kripke_Outline.pdf
+  * Nelson's Theory of Falsity and Popper's Theory of Refutation.
 
 We can posit the existence of additional derivable varieties of hierarchies which reject more than one of the four conditions.
