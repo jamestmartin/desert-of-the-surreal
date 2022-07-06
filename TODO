@@ -13,3 +13,5 @@
 * investigate differences between the conditions for computation in LK vs LJ wrt context handness, structure, and axioms.
 
 * Licensing agreements
+
+* Eta rules
